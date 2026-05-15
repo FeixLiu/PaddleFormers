@@ -1,0 +1,2 @@
+INFO     PaddleFormers:unified_checkpoint_quantization.py:48 Start unified checkpoint dequantization, stage O1.
+INFO     PaddleFormers:unified_checkpoint_quantization.py:147 Unified checkpoint dequantization done, stage O1.

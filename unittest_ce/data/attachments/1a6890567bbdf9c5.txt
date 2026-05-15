@@ -1,0 +1,3 @@
+INFO     PaddleFormers:mllm_utils.py:127 LoRA target modules filtered by [freeze_aligner]:
++ [aligner] removed 1 targets:
+  - model.visual.merger.weight

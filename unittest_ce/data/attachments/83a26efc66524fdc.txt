@@ -1,0 +1,5 @@
+INFO     PaddleFormers:testing_utils.py:614 GptOssModelIntegrationTest [PID:2685] Device: gpu:0
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-gptoss
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /home/models/PaddleFormers/tiny-random-gptoss/config.json
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-gptoss
+INFO     PaddleFormers:model_utils.py:2157 Loading weights file from cache at /home/models/PaddleFormers/tiny-random-gptoss/model.safetensors

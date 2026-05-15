@@ -1,0 +1,3 @@
+INFO     PaddleFormers:testing_utils.py:614 GlmMoeDsaModelTest [PID:2685] Device: gpu:0
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+INFO     paddlefleet.transformer.moe.moe_layer:moe_layer.py:259 deepep/hybridep in paddlepaddle does not support compute capability < 9.0, fallback to alltoall token dispatcher.

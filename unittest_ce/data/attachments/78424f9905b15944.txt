@@ -1,0 +1,1 @@
+INFO     PaddleFormers:export.py:104 Starting model export from checkpoint: /tmp/model

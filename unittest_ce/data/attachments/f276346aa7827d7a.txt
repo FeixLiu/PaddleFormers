@@ -1,0 +1,1 @@
+INFO     PaddleFormers:testing_utils.py:614 Qwen2MoeModelTest [PID:2685] Device: gpu:0

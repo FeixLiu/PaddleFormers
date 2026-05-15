@@ -1,0 +1,7 @@
+INFO     PaddleFormers:testing_utils.py:614 TestQwenVisionProcessing [PID:2685] Device: gpu:0
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): paddlenlp.bj.bcebos.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://paddlenlp.bj.bcebos.com:443 "GET /datasets/paddlemix/demo_images/example1.jpg HTTP/1.1" 200 552828
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'IHDR' 16 13
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'sRGB' 41 1
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'eXIf' 54 68
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'IDAT' 134 16384

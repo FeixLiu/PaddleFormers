@@ -1,0 +1,1 @@
+INFO     PaddleFormers:workflow.py:90 freeze_param_except_mtp.

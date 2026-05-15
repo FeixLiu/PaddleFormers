@@ -1,0 +1,27 @@
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+INFO     PaddleFormers:processing_utils.py:621 loading configuration file /tmp/tmpi9xy4z3w/processor_config.json
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+INFO     PaddleFormers:processing_utils.py:621 loading configuration file /tmp/tmpi9xy4z3w/processor_config.json
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+INFO     PaddleFormers:image_processing_utils.py:248 loading configuration file /tmp/tmpi9xy4z3w/preprocessor_config.json
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): paddlenlp.bj.bcebos.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://paddlenlp.bj.bcebos.com:443 "GET /datasets/paddlemix/demo_video/example_video.mp4 HTTP/1.1" 200 17417367
+DEBUG    PaddleFormers:vision_process.py:243 sampling at target_frames=17, frames_sample=middle
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): paddlenlp.bj.bcebos.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://paddlenlp.bj.bcebos.com:443 "GET /datasets/paddlemix/demo_video/example_video.mp4 HTTP/1.1" 200 17417367
+DEBUG    PaddleFormers:vision_process.py:243 sampling at target_frames=3, frames_sample=middle
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): paddlenlp.bj.bcebos.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://paddlenlp.bj.bcebos.com:443 "GET /datasets/paddlemix/demo_video/example_video.mp4 HTTP/1.1" 200 17417367
+DEBUG    PaddleFormers:vision_process.py:243 sampling at target_frames=16, frames_sample=middle
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): paddlenlp.bj.bcebos.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://paddlenlp.bj.bcebos.com:443 "GET /datasets/paddlemix/demo_video/example_video.mp4 HTTP/1.1" 200 17417367
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): paddlenlp.bj.bcebos.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://paddlenlp.bj.bcebos.com:443 "GET /datasets/paddlemix/demo_video/example_video.mp4 HTTP/1.1" 200 17417367
+DEBUG    PaddleFormers:vision_process.py:243 sampling at target_frames=17, frames_sample=middle
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): paddlenlp.bj.bcebos.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://paddlenlp.bj.bcebos.com:443 "GET /datasets/paddlemix/demo_video/example_video.mp4 HTTP/1.1" 200 17417367
+DEBUG    PaddleFormers:vision_process.py:243 sampling at target_frames=17, frames_sample=middle
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): paddlenlp.bj.bcebos.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://paddlenlp.bj.bcebos.com:443 "GET /datasets/paddlemix/demo_video/example_video.mp4 HTTP/1.1" 200 17417367
+DEBUG    PaddleFormers:vision_process.py:243 sampling at target_frames=17, frames_sample=middle

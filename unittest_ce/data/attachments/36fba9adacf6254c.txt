@@ -1,0 +1,5 @@
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-glmocr
+INFO     PaddleFormers:image_processing_utils.py:250 loading configuration file preprocessor_config.json from cache at /home/models/PaddleFormers/tiny-random-glmocr/preprocessor_config.json
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+INFO     PaddleFormers:image_processing_utils.py:248 loading configuration file /tmp/tmpg448_n3m/preprocessor_config.json

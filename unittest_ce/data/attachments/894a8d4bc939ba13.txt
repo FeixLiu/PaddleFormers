@@ -1,0 +1,36 @@
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp79q1vanp/torch_model/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmp79q1vanp/torch_model/model.safetensors
+WARNING  PaddleFormers:lora_model.py:274 Reset tensor_model_parallel_size of lora_config to 1.
+INFO     PaddleFormers:lora_model.py:283 Mark only lora and trainable_module as trainable.
+INFO     PaddleFormers:lora_model.py:611 Saving LoRA weights use safetensors: True
+INFO     PaddleFormers:model_utils.py:3896 [Rank 0/1] (Saver) Initializing save. Max shard size set to: 4.00 GB
+INFO     PaddleFormers:model_utils.py:3931 [Rank 0/1] Starting to process the weight iterator...
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.mlp.down_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.mlp.down_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.mlp.up_gate_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.mlp.up_gate_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.self_attn.o_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.self_attn.o_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.self_attn.qkv_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.self_attn.qkv_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.mlp.down_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.mlp.down_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.mlp.up_gate_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.mlp.up_gate_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.self_attn.o_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.self_attn.o_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.self_attn.qkv_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.self_attn.qkv_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3917 [Rank 0/1] Saving sub-shard 0... Size: 0.30 MB, Params: 16, Path: /tmp/tmp79q1vanp/lora_model/shard_0-0.safetensors
+INFO     PaddleFormers:model_utils.py:3949 [Rank 0/1] (Saver) All shards saved successfully.
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmp79q1vanp/lora_model/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp79q1vanp/torch_model/config.json
+INFO     PaddleFormers:merge_model.py:621 Load LoRA weight successfully.
+INFO     PaddleFormers:merge_model.py:625 Load model weight successfully.
+INFO     PaddleFormers:merge_model.py:696 Merge tensors successfully.
+INFO     PaddleFormers:merge_model.py:703 Model weights saved in /tmp/tmp79q1vanp/merged_model/model-00001-of-00001.safetensors.
+INFO     PaddleFormers:merge_model.py:803 Model index file saved in /tmp/tmp79q1vanp/merged_model/model.safetensors.index.json.
+INFO     PaddleFormers:merge_config.py:152 Merge config file saved in /tmp/tmp79q1vanp/merged_model/merge_config.json.

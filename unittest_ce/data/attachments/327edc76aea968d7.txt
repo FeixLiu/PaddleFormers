@@ -1,0 +1,5 @@
+INFO     PaddleFormers:training_args.py:1750 fa_version = 2 set FLAGS_flash_attn_version to 2
+WARNING  PaddleFormers:training_args.py:1898 set amp_master_grad to false since amp is disabled.
+INFO     PaddleFormers:training_args.py:2645 The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+INFO     PaddleFormers:training_args.py:2711 Auto set hybrid_parallel_expert_grad_scale = 1.0
+INFO     PaddleFormers:integrations.py:455 Automatic SwanLab logging enabled, to disable set os.environ["SWANLAB_MODE"] = "disabled"

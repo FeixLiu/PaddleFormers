@@ -1,0 +1,1 @@
+WARNING  paddleformers.cli.train.ernie_pretrain.models.ernie.configuration:configuration.py:206 set `use_recompute_attn`=True, disabling `use_recompute`

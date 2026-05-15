@@ -1,0 +1,1 @@
+INFO     PaddleFormers:moe_allgather_layer.py:139 uisng MOEAllGatherLayerV2, use_expert_out_alltoall=True, use_padding=True, enable_reverse_token_drop=False

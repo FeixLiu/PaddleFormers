@@ -1,0 +1,1 @@
+INFO     PaddleFormers:testing_utils.py:614 TestLoraLayer [PID:2685] Device: gpu:0

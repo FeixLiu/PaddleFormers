@@ -1,0 +1,12 @@
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-llama3
+INFO     PaddleFormers:modeling.py:297 We are using <class 'paddleformers.transformers.llama.modeling.LlamaForCausalLM'> to load 'PaddleFormers/tiny-random-llama3'.
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-llama3
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /home/models/PaddleFormers/tiny-random-llama3/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-llama3
+INFO     PaddleFormers:model_utils.py:2157 Loading weights file from cache at /home/models/PaddleFormers/tiny-random-llama3/model.safetensors
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
+WARNING  PaddleFormers:lora_model.py:274 Reset tensor_model_parallel_size of lora_config to 1.
+INFO     PaddleFormers:lora_model.py:283 Mark only lora and trainable_module as trainable.

@@ -1,0 +1,26 @@
+INFO     PaddleFormers:testing_utils.py:614 Qwen3VLMoeModelTest [PID:2685] Device: gpu:0
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmpe7zrndoo/config.json
+INFO     PaddleFormers:model_utils.py:3395 Model weights saved in /tmp/tmpe7zrndoo/model_state.pdparams
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmpe7zrndoo/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmpe7zrndoo/model_state.pdparams
+INFO     PaddleFormers:model_utils.py:3007 Loaded weights file from disk, setting weights to model.
+INFO     PaddleFormers:model_utils.py:2669 All model checkpoint weights were used when initializing Qwen3VLMoeModelDeprecated.
+
+INFO     PaddleFormers:model_utils.py:2678 All the weights of Qwen3VLMoeModelDeprecated were initialized from the model checkpoint at /tmp/tmpe7zrndoo.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use Qwen3VLMoeModelDeprecated for predictions without further training.
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmphao7r413/config.json
+INFO     PaddleFormers:configuration_utils.py:334 Configuration saved in /tmp/tmphao7r413/generation_config.json
+INFO     PaddleFormers:model_utils.py:3395 Model weights saved in /tmp/tmphao7r413/model_state.pdparams
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmphao7r413/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmphao7r413/model_state.pdparams
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
+INFO     PaddleFormers:model_utils.py:3007 Loaded weights file from disk, setting weights to model.
+INFO     PaddleFormers:model_utils.py:2669 All model checkpoint weights were used when initializing Qwen3VLMoeForConditionalGenerationDeprecated.
+
+INFO     PaddleFormers:model_utils.py:2678 All the weights of Qwen3VLMoeForConditionalGenerationDeprecated were initialized from the model checkpoint at /tmp/tmphao7r413.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use Qwen3VLMoeForConditionalGenerationDeprecated for predictions without further training.
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:425 Loading configuration file /tmp/tmphao7r413/generation_config.json

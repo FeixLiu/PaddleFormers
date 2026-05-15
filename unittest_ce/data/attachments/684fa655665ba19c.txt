@@ -1,0 +1,20 @@
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-glm4moe-bf16
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /home/models/PaddleFormers/tiny-random-glm4moe-bf16/config.json
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-glm4moe-bf16
+INFO     PaddleFormers:model_utils.py:2157 Loading weights file from cache at /home/models/PaddleFormers/tiny-random-glm4moe-bf16/model.safetensors
+WARNING  PaddleFormers:lora_model.py:274 Reset tensor_model_parallel_size of lora_config to 1.
+INFO     PaddleFormers:lora_model.py:283 Mark only lora and trainable_module as trainable.
+INFO     PaddleFormers:lora_model.py:611 Saving LoRA weights use safetensors: True
+INFO     PaddleFormers:model_utils.py:3896 [Rank 0/1] (Saver) Initializing save. Max shard size set to: 4.00 GB
+INFO     PaddleFormers:model_utils.py:3931 [Rank 0/1] Starting to process the weight iterator...
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter layers.0.self_attn.qkv_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter layers.0.self_attn.qkv_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter layers.1.self_attn.qkv_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter layers.1.self_attn.qkv_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3917 [Rank 0/1] Saving sub-shard 0... Size: 0.10 MB, Params: 4, Path: /tmp/tmp1__lfcsp/shard_0-0.safetensors
+INFO     PaddleFormers:model_utils.py:3949 [Rank 0/1] (Saver) All shards saved successfully.
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmp1__lfcsp/config.json
+INFO     PaddleFormers:lora_model.py:283 Mark only lora and trainable_module as trainable.
+INFO     PaddleFormers:lora_model.py:283 Mark only lora and trainable_module as trainable.

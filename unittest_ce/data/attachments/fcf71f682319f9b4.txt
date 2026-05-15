@@ -1,0 +1,1 @@
+INFO     paddleformers.cli.train.ernie_pretrain.src.callbacks.logging_callback:logging_callback.py:43 loss: 0.5, lr: 0.001000

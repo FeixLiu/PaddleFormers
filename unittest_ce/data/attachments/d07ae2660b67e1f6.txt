@@ -1,0 +1,15 @@
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+INFO     PaddleFormers:processing_utils.py:621 loading configuration file /tmp/tmpi9xy4z3w/processor_config.json
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+INFO     PaddleFormers:processing_utils.py:621 loading configuration file /tmp/tmpi9xy4z3w/processor_config.json
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+INFO     PaddleFormers:image_processing_utils.py:248 loading configuration file /tmp/tmpi9xy4z3w/preprocessor_config.json
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
+INFO     PaddleFormers:processing_utils.py:432 chat template saved in /tmp/tmpho5jrp0y/chat_template.jinja
+INFO     PaddleFormers:processing_utils.py:464 processor saved in /tmp/tmpho5jrp0y/processor_config.json
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+INFO     PaddleFormers:processing_utils.py:621 loading configuration file /tmp/tmpho5jrp0y/processor_config.json
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+INFO     PaddleFormers:image_processing_utils.py:248 loading configuration file /tmp/tmpho5jrp0y/preprocessor_config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio

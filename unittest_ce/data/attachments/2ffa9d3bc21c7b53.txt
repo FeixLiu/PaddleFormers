@@ -1,0 +1,2 @@
+WARNING  PaddleFormers:lora_quantization_layers.py:86 QuantizationLoRALinear does not support merge()
+WARNING  PaddleFormers:lora_quantization_layers.py:89 QuantizationLoRALinear does not support unmerge()
