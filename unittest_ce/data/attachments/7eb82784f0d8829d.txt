@@ -1,7 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 Qwen3NextModelTest [PID:2685] Device: gpu:0
-WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
-WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
-INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmpbkto9f_w/config.json
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmpbkto9f_w/model_config.json
-WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}

@@ -1,0 +1,25 @@
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /home/models/PaddleFormers/tiny-random-qwen3vlmoev2/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+INFO     PaddleFormers:model_utils.py:2157 Loading weights file from cache at /home/models/PaddleFormers/tiny-random-qwen3vlmoev2/model.safetensors
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
+WARNING  PaddleFormers:lora_model.py:274 Reset tensor_model_parallel_size of lora_config to 1.
+INFO     PaddleFormers:lora_model.py:283 Mark only lora and trainable_module as trainable.
+INFO     PaddleFormers:lora_model.py:611 Saving LoRA weights use safetensors: True
+INFO     PaddleFormers:model_utils.py:3896 [Rank 0/1] (Saver) Initializing save. Max shard size set to: 4.00 GB
+INFO     PaddleFormers:model_utils.py:3931 [Rank 0/1] Starting to process the weight iterator...
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.language_model.layers.0.mlp.experts.down_proj_lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.language_model.layers.0.mlp.experts.down_proj_lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.language_model.layers.0.mlp.experts.gate_up_proj_lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.language_model.layers.0.mlp.experts.gate_up_proj_lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.language_model.layers.1.mlp.experts.down_proj_lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.language_model.layers.1.mlp.experts.down_proj_lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.language_model.layers.1.mlp.experts.gate_up_proj_lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.language_model.layers.1.mlp.experts.gate_up_proj_lora_B
+INFO     PaddleFormers:model_utils.py:3917 [Rank 0/1] Saving sub-shard 0... Size: 0.50 MB, Params: 8, Path: /tmp/tmpdoaqqpgn/shard_0-0.safetensors
+INFO     PaddleFormers:model_utils.py:3949 [Rank 0/1] (Saver) All shards saved successfully.
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmpdoaqqpgn/config.json
+INFO     PaddleFormers:lora_model.py:283 Mark only lora and trainable_module as trainable.
+INFO     PaddleFormers:lora_model.py:283 Mark only lora and trainable_module as trainable.

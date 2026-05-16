@@ -1,0 +1,93 @@
+INFO     PaddleFormers:testing_utils.py:614 Phi3ModelTest [PID:2708] Device: gpu:0
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-phi4
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /home/models/PaddleFormers/tiny-random-phi4/config.json
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-phi4
+INFO     PaddleFormers:model_utils.py:2157 Loading weights file from cache at /home/models/PaddleFormers/tiny-random-phi4/model.safetensors
+INFO     PaddleFormers:model_utils.py:3007 Loaded weights file from disk, setting weights to model.
+WARNING  PaddleFormers:model_utils.py:2652 Some weights of the model checkpoint at PaddleFormers/tiny-random-phi4 were not used when initializing Phi3Model: ['lm_head.weight']
+- This IS expected if you are initializing Phi3Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Phi3Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+INFO     PaddleFormers:model_utils.py:2678 All the weights of Phi3Model were initialized from the model checkpoint at PaddleFormers/tiny-random-phi4.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use Phi3Model for predictions without further training.
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-phi4
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /home/models/PaddleFormers/tiny-random-phi4/config.json
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-phi4
+INFO     PaddleFormers:model_utils.py:2157 Loading weights file from cache at /home/models/PaddleFormers/tiny-random-phi4/model.safetensors
+WARNING  paddle.distributed.flex_checkpoint.aoa.aoa_engine:aoa_engine.py:176 No shard information found for any of the keys: ['model.layers.0.self_attn.qkv_proj.weight_transpose_tmp', 'model.layers.0.self_attn.qkv_proj.weight_transpose_tmp.w_0', 'model.layers.0.self_attn.qkv_proj.weight_transpose_tmp.moment1_0', 'model.layers.0.self_attn.qkv_proj.weight_transpose_tmp.moment2_0'], return 1.
+WARNING  paddle.distributed.flex_checkpoint.aoa.aoa_engine:aoa_engine.py:176 No shard information found for any of the keys: ['model.layers.0.mlp.gate_up_proj.weight_transpose_tmp', 'model.layers.0.mlp.gate_up_proj.weight_transpose_tmp.w_0', 'model.layers.0.mlp.gate_up_proj.weight_transpose_tmp.moment1_0', 'model.layers.0.mlp.gate_up_proj.weight_transpose_tmp.moment2_0'], return 1.
+INFO     PaddleFormers:model_utils.py:3896 [Rank 0/1] (Saver) Initializing save. Max shard size set to: 10.00 GB
+INFO     PaddleFormers:model_utils.py:3931 [Rank 0/1] Starting to process the weight iterator...
+WARNING  paddle.distributed.flex_checkpoint.aoa.aoa_engine:aoa_engine.py:176 No shard information found for any of the keys: ['layers.0.mlp.gate_up_proj.weight_transpose_tmp', 'layers.0.mlp.gate_up_proj.weight_transpose_tmp.w_0', 'layers.0.mlp.gate_up_proj.weight_transpose_tmp.moment1_0', 'layers.0.mlp.gate_up_proj.weight_transpose_tmp.moment2_0'], return 1.
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.embed_tokens.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.input_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.mlp.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.mlp.gate_up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.post_attention_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.o_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.qkv_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.norm.weight
+INFO     PaddleFormers:model_utils.py:3917 [Rank 0/1] Saving sub-shard 0... Size: 3.46 MB, Params: 8, Path: /tmp/tmphtvdvg2a/shard_0-0.safetensors
+INFO     PaddleFormers:model_utils.py:3949 [Rank 0/1] (Saver) All shards saved successfully.
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmphtvdvg2a/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmphtvdvg2a/config.json
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmphtvdvg2a/model.safetensors.index.json
+INFO     PaddleFormers:model_utils.py:2295 Getting fuse_actions for determine expected keys set succeed, number of fuse actions: 0
+INFO     PaddleFormers:model_utils.py:2669 All model checkpoint weights were used when initializing Phi3Model.
+
+INFO     PaddleFormers:model_utils.py:2678 All the weights of Phi3Model were initialized from the model checkpoint at /tmp/tmphtvdvg2a.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use Phi3Model for predictions without further training.
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-phi4
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /home/models/PaddleFormers/tiny-random-phi4/config.json
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-phi4
+INFO     PaddleFormers:model_utils.py:2157 Loading weights file from cache at /home/models/PaddleFormers/tiny-random-phi4/model.safetensors
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
+INFO     PaddleFormers:model_utils.py:3007 Loaded weights file from disk, setting weights to model.
+INFO     PaddleFormers:model_utils.py:2669 All model checkpoint weights were used when initializing Phi3ForCausalLM.
+
+INFO     PaddleFormers:model_utils.py:2678 All the weights of Phi3ForCausalLM were initialized from the model checkpoint at PaddleFormers/tiny-random-phi4.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use Phi3ForCausalLM for predictions without further training.
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-phi4
+INFO     PaddleFormers:configuration_utils.py:425 Loading configuration file /home/models/PaddleFormers/tiny-random-phi4/generation_config.json
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-phi4
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /home/models/PaddleFormers/tiny-random-phi4/config.json
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-phi4
+INFO     PaddleFormers:model_utils.py:2157 Loading weights file from cache at /home/models/PaddleFormers/tiny-random-phi4/model.safetensors
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
+WARNING  paddle.distributed.flex_checkpoint.aoa.aoa_engine:aoa_engine.py:176 No shard information found for any of the keys: ['model.layers.0.self_attn.qkv_proj.weight_transpose_tmp', 'model.layers.0.self_attn.qkv_proj.weight_transpose_tmp.w_0', 'model.layers.0.self_attn.qkv_proj.weight_transpose_tmp.moment1_0', 'model.layers.0.self_attn.qkv_proj.weight_transpose_tmp.moment2_0'], return 1.
+WARNING  paddle.distributed.flex_checkpoint.aoa.aoa_engine:aoa_engine.py:176 No shard information found for any of the keys: ['model.layers.0.mlp.gate_up_proj.weight_transpose_tmp', 'model.layers.0.mlp.gate_up_proj.weight_transpose_tmp.w_0', 'model.layers.0.mlp.gate_up_proj.weight_transpose_tmp.moment1_0', 'model.layers.0.mlp.gate_up_proj.weight_transpose_tmp.moment2_0'], return 1.
+INFO     PaddleFormers:model_utils.py:3896 [Rank 0/1] (Saver) Initializing save. Max shard size set to: 10.00 GB
+INFO     PaddleFormers:model_utils.py:3931 [Rank 0/1] Starting to process the weight iterator...
+WARNING  paddle.distributed.flex_checkpoint.aoa.aoa_engine:aoa_engine.py:176 No shard information found for any of the keys: ['model.layers.0.mlp.gate_up_proj.weight_transpose_tmp', 'model.layers.0.mlp.gate_up_proj.weight_transpose_tmp.w_0', 'model.layers.0.mlp.gate_up_proj.weight_transpose_tmp.moment1_0', 'model.layers.0.mlp.gate_up_proj.weight_transpose_tmp.moment2_0'], return 1.
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter lm_head.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.embed_tokens.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.input_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.mlp.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.mlp.gate_up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.post_attention_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.o_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.qkv_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.norm.weight
+INFO     PaddleFormers:model_utils.py:3917 [Rank 0/1] Saving sub-shard 0... Size: 5.42 MB, Params: 9, Path: /tmp/tmpb2e0jag_/shard_0-0.safetensors
+INFO     PaddleFormers:model_utils.py:3949 [Rank 0/1] (Saver) All shards saved successfully.
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmpb2e0jag_/config.json
+INFO     PaddleFormers:configuration_utils.py:334 Configuration saved in /tmp/tmpb2e0jag_/generation_config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmpb2e0jag_/config.json
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmpb2e0jag_/model.safetensors.index.json
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
+INFO     PaddleFormers:model_utils.py:2295 Getting fuse_actions for determine expected keys set succeed, number of fuse actions: 0
+INFO     PaddleFormers:model_utils.py:2669 All model checkpoint weights were used when initializing Phi3ForCausalLM.
+
+INFO     PaddleFormers:model_utils.py:2678 All the weights of Phi3ForCausalLM were initialized from the model checkpoint at /tmp/tmpb2e0jag_.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use Phi3ForCausalLM for predictions without further training.
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:425 Loading configuration file /tmp/tmpb2e0jag_/generation_config.json

@@ -1,4 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 LlamaModelTest [PID:2685] Device: gpu:0
-INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
-WARNING  PaddleFormers:model_utils.py:1646 The shape of input embeddings is paddle.Size([32010, 64]) and the shape of output embeddings is paddle.Size([32000, 64]). This is only expected if you are calling the `resize_token_embeddings` method
-WARNING  PaddleFormers:model_utils.py:1646 The shape of input embeddings is paddle.Size([31985, 64]) and the shape of output embeddings is paddle.Size([32010, 64]). This is only expected if you are calling the `resize_token_embeddings` method

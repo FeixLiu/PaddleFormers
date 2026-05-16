@@ -1,0 +1,5 @@
+INFO     PaddleFormers:testing_utils.py:614 Qwen3NextModelTest [PID:2708] Device: gpu:0
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
+WARNING  PaddleFormers:utils.py:1103 `min_length` will be deprecated in future releases, use `min_new_tokens` instead.
+WARNING  PaddleFormers:utils.py:1103 `min_length` will be deprecated in future releases, use `min_new_tokens` instead.

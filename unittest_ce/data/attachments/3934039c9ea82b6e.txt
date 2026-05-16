@@ -1,0 +1,4 @@
+INFO     PaddleFormers:testing_utils.py:614 Qwen3ModelTest [PID:2708] Device: gpu:0
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmp_hj2i80v/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp_hj2i80v/model_config.json

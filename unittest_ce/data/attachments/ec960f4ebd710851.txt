@@ -1,1 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 GlmMoeDsaModelIntegrationTest [PID:2685] Device: gpu:0

@@ -1,2 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 Qwen3MoeModelTest [PID:2685] Device: gpu:0
-INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False

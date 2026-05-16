@@ -1,0 +1,4 @@
+INFO     PaddleFormers:testing_utils.py:614 LlamaModelTest [PID:2708] Device: gpu:0
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmpv09_tgbn/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmpv09_tgbn/model_config.json

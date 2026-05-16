@@ -1,9 +1,0 @@
-INFO     PaddleFormers:training_args.py:1750 fa_version = 2 set FLAGS_flash_attn_version to 2
-WARNING  PaddleFormers:training_args.py:1898 set amp_master_grad to false since amp is disabled.
-INFO     PaddleFormers:training_args.py:2645 The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
-INFO     PaddleFormers:training_args.py:2711 Auto set hybrid_parallel_expert_grad_scale = 1.0
-DEBUG    tensorboard:event_file_loader.py:58 Opening a stub record reader pointing at /tmp/tmp9dkaqeaw/events.out.tfevents.1778863978.yq01-inf-hic-k8s-a100-aa24-0583.yq01.baidu.com
-DEBUG    tensorboard:event_file_loader.py:156 Loading events from /tmp/tmp9dkaqeaw/events.out.tfevents.1778863978.yq01-inf-hic-k8s-a100-aa24-0583.yq01.baidu.com
-DEBUG    tensorboard:event_file_loader.py:180 End of file in /tmp/tmp9dkaqeaw/events.out.tfevents.1778863978.yq01-inf-hic-k8s-a100-aa24-0583.yq01.baidu.com
-DEBUG    tensorboard:event_file_loader.py:188 No more events in /tmp/tmp9dkaqeaw/events.out.tfevents.1778863978.yq01-inf-hic-k8s-a100-aa24-0583.yq01.baidu.com
-INFO     tensorboard:directory_watcher.py:123 No path found after /tmp/tmp9dkaqeaw/events.out.tfevents.1778863978.yq01-inf-hic-k8s-a100-aa24-0583.yq01.baidu.com

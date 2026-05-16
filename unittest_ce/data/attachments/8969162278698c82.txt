@@ -1,0 +1,105 @@
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmp3yom755f/config.json
+INFO     PaddleFormers:model_utils.py:3395 Model weights saved in /tmp/tmp3yom755f/model_state.pdparams
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp3yom755f/config.json
+INFO     PaddleFormers:modeling.py:297 We are using <class 'tests.utils.test_module.custom_model.CustomModel'> to load '/tmp/tmp3yom755f'.
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp3yom755f/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmp3yom755f/model_state.pdparams
+INFO     PaddleFormers:model_utils.py:3007 Loaded weights file from disk, setting weights to model.
+INFO     PaddleFormers:model_utils.py:2669 All model checkpoint weights were used when initializing CustomModel.
+
+INFO     PaddleFormers:model_utils.py:2678 All the weights of CustomModel were initialized from the model checkpoint at /tmp/tmp3yom755f.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use CustomModel for predictions without further training.
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmp5d3ce5zu/config.json
+INFO     PaddleFormers:model_utils.py:3395 Model weights saved in /tmp/tmp5d3ce5zu/model_state.pdparams
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp5d3ce5zu/config.json
+INFO     PaddleFormers:modeling.py:297 We are using <class 'tests.utils.test_module.custom_model.CustomModel'> to load '/tmp/tmp5d3ce5zu'.
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp5d3ce5zu/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmp5d3ce5zu/model_state.pdparams
+INFO     PaddleFormers:model_utils.py:3007 Loaded weights file from disk, setting weights to model.
+INFO     PaddleFormers:model_utils.py:2669 All model checkpoint weights were used when initializing CustomModel.
+
+INFO     PaddleFormers:model_utils.py:2678 All the weights of CustomModel were initialized from the model checkpoint at /tmp/tmp5d3ce5zu.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use CustomModel for predictions without further training.
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmp2hvar1t2/config.json
+INFO     PaddleFormers:model_utils.py:3395 Model weights saved in /tmp/tmp2hvar1t2/model_state.pdparams
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp2hvar1t2/config.json
+INFO     PaddleFormers:modeling.py:297 We are using <class 'tests.utils.test_module.custom_model.CustomModel'> to load '/tmp/tmp2hvar1t2'.
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp2hvar1t2/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmp2hvar1t2/model_state.pdparams
+INFO     PaddleFormers:model_utils.py:3007 Loaded weights file from disk, setting weights to model.
+INFO     PaddleFormers:model_utils.py:2669 All model checkpoint weights were used when initializing CustomModel.
+
+INFO     PaddleFormers:model_utils.py:2678 All the weights of CustomModel were initialized from the model checkpoint at /tmp/tmp2hvar1t2.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use CustomModel for predictions without further training.
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmp8s7uvcw9/config.json
+INFO     PaddleFormers:model_utils.py:3395 Model weights saved in /tmp/tmp8s7uvcw9/model_state.pdparams
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp8s7uvcw9/config.json
+INFO     PaddleFormers:modeling.py:297 We are using <class 'tests.utils.test_module.custom_model.CustomModel'> to load '/tmp/tmp8s7uvcw9'.
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp8s7uvcw9/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmp8s7uvcw9/model_state.pdparams
+INFO     PaddleFormers:model_utils.py:3007 Loaded weights file from disk, setting weights to model.
+INFO     PaddleFormers:model_utils.py:2669 All model checkpoint weights were used when initializing CustomModel.
+
+INFO     PaddleFormers:model_utils.py:2678 All the weights of CustomModel were initialized from the model checkpoint at /tmp/tmp8s7uvcw9.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use CustomModel for predictions without further training.
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmpftqkm6yi/config.json
+INFO     PaddleFormers:model_utils.py:3395 Model weights saved in /tmp/tmpftqkm6yi/model_state.pdparams
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmpftqkm6yi/config.json
+INFO     PaddleFormers:modeling.py:297 We are using <class 'tests.utils.test_module.custom_model.CustomModel'> to load '/tmp/tmpftqkm6yi'.
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmpftqkm6yi/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmpftqkm6yi/model_state.pdparams
+INFO     PaddleFormers:model_utils.py:3007 Loaded weights file from disk, setting weights to model.
+INFO     PaddleFormers:model_utils.py:2669 All model checkpoint weights were used when initializing CustomModel.
+
+INFO     PaddleFormers:model_utils.py:2678 All the weights of CustomModel were initialized from the model checkpoint at /tmp/tmpftqkm6yi.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use CustomModel for predictions without further training.
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmpnffwrf4l/config.json
+INFO     PaddleFormers:model_utils.py:3395 Model weights saved in /tmp/tmpnffwrf4l/model_state.pdparams
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmpnffwrf4l/config.json
+INFO     PaddleFormers:modeling.py:297 We are using <class 'tests.utils.test_module.custom_model.CustomModel'> to load '/tmp/tmpnffwrf4l'.
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmpnffwrf4l/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmpnffwrf4l/model_state.pdparams
+INFO     PaddleFormers:model_utils.py:3007 Loaded weights file from disk, setting weights to model.
+INFO     PaddleFormers:model_utils.py:2669 All model checkpoint weights were used when initializing CustomModel.
+
+INFO     PaddleFormers:model_utils.py:2678 All the weights of CustomModel were initialized from the model checkpoint at /tmp/tmpnffwrf4l.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use CustomModel for predictions without further training.
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmplvgtonm2/config.json
+INFO     PaddleFormers:model_utils.py:3395 Model weights saved in /tmp/tmplvgtonm2/model_state.pdparams
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmplvgtonm2/config.json
+INFO     PaddleFormers:modeling.py:297 We are using <class 'tests.utils.test_module.custom_model.CustomModel'> to load '/tmp/tmplvgtonm2'.
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmplvgtonm2/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmplvgtonm2/model_state.pdparams
+INFO     PaddleFormers:model_utils.py:3007 Loaded weights file from disk, setting weights to model.
+INFO     PaddleFormers:model_utils.py:2669 All model checkpoint weights were used when initializing CustomModel.
+
+INFO     PaddleFormers:model_utils.py:2678 All the weights of CustomModel were initialized from the model checkpoint at /tmp/tmplvgtonm2.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use CustomModel for predictions without further training.

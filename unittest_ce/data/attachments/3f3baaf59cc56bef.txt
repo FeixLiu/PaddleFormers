@@ -1,0 +1,1 @@
+INFO     PaddleFormers:testing_utils.py:614 Qwen2_5_VLModelTest [PID:2708] Device: gpu:0

@@ -1,5 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 DeepseekV3CompatibilityTest [PID:2685] Device: gpu:0
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp3ykrplih/config.json
-INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmp3ykrplih/model.safetensors
-INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False

@@ -1,0 +1,4 @@
+INFO     PaddleFormers:testing_utils.py:614 Qwen2MoeModelTest [PID:2708] Device: gpu:0
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmp_pplju65/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp_pplju65/model_config.json

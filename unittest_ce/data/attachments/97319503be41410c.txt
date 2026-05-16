@@ -1,0 +1,15 @@
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-kimi-k25
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-kimi-k25
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-kimi-k25
+INFO     PaddleFormers:processing_utils.py:623 loading configuration file processor_config.json from cache at None
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-kimi-k25
+INFO     PaddleFormers:image_processing_utils.py:250 loading configuration file preprocessor_config.json from cache at /home/models/PaddleFormers/tiny-random-kimi-k25/preprocessor_config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-kimi-k25
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
+INFO     PaddleFormers:tokenizer.py:121 Reloaded tiktoken model from /home/models/PaddleFormers/tiny-random-kimi-k25/tiktoken.model
+INFO     PaddleFormers:tokenizer.py:127 #words: 163840 - BOS ID: 163584 - EOS ID: 163585
+INFO     PaddleFormers:processing_utils.py:432 chat template saved in /tmp/tmpu3obpqpg/chat_template.jinja
+INFO     PaddleFormers:testing_utils.py:614 KimiK25ProcessorTest [PID:2708] Device: gpu:0

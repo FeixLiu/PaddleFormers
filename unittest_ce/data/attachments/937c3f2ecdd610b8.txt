@@ -1,0 +1,1 @@
+INFO     PaddleFormers:merge_config.py:152 Merge config file saved in /tmp/tmpdtj6u6uv/merge_config.json.

@@ -1,0 +1,4 @@
+INFO     PaddleFormers:testing_utils.py:614 DeepseekV3ModelTest [PID:2708] Device: gpu:0
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmp18xamb2n/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmp18xamb2n/model_config.json

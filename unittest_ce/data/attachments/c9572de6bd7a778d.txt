@@ -1,0 +1,4 @@
+INFO     PaddleFormers:testing_utils.py:614 PaddleOCRVLModelTest [PID:2708] Device: gpu:0
+WARNING  PaddleFormers:log.py:135 use GQA - num_heads: 4- num_key_value_heads: 2
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
