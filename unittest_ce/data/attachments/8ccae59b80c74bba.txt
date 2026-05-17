@@ -1,0 +1,4 @@
+INFO     PaddleFormers:testing_utils.py:614 Gemma3TextModelTest [PID:2711] Device: gpu:0
+INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmpcay2bf52/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1225 Loading configuration file /tmp/tmpcay2bf52/model_config.json

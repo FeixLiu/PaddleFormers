@@ -1,1 +1,0 @@
-INFO     PaddleFormers:configuration_utils.py:1065 Configuration saved in /tmp/tmpi_vrpqr0/config.json

@@ -1,6 +1,0 @@
-INFO     PaddleFormers:video_processing_utils.py:462 Using download source: aistudio
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen25vlv2
-INFO     PaddleFormers:video_processing_utils.py:519 loading configuration file video_preprocessor_config.json from cache at /home/models/PaddleFormers/tiny-random-qwen25vlv2/preprocessor_config.json
-INFO     PaddleFormers:video_processing_utils.py:449 Video processor saved in /tmp/tmp72x8w424/video_preprocessor_config.json
-INFO     PaddleFormers:video_processing_utils.py:462 Using download source: aistudio
-INFO     PaddleFormers:video_processing_utils.py:517 loading configuration file /tmp/tmp72x8w424/video_preprocessor_config.json

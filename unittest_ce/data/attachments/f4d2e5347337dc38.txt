@@ -1,8 +1,0 @@
-ERROR    datasets.load:load.py:1663 `trust_remote_code` is not supported anymore.
-Please check that the Hugging Face dataset 'json' isn't based on a loading script and remove `trust_remote_code`.
-If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
-DEBUG    fsspec.local:local.py:383 open file: /home/paddle-1/runner_03/actions-runner/_work/PaddleFormers/PaddleFormers/../../../paddlenlp/huggingface/datasets/json/default-adb8eac7997e051b/0.0.0/fd36e719ef4622b68c8a653acedc0de994c84ff8d005b98b3a6dcf1978154481/dataset_info.json
-ERROR    datasets.load:load.py:1663 `trust_remote_code` is not supported anymore.
-Please check that the Hugging Face dataset 'json' isn't based on a loading script and remove `trust_remote_code`.
-If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
-DEBUG    fsspec.local:local.py:383 open file: /home/paddle-1/runner_03/actions-runner/_work/PaddleFormers/PaddleFormers/../../../paddlenlp/huggingface/datasets/json/default-adb8eac7997e051b/0.0.0/fd36e719ef4622b68c8a653acedc0de994c84ff8d005b98b3a6dcf1978154481/dataset_info.json
