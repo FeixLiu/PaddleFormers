@@ -1,2 +1,0 @@
-INFO     PaddleFormers:timer.py:165 enable PaddleNLP timer
-INFO     PaddleFormers:timer.py:171 disable PaddleNLP timer

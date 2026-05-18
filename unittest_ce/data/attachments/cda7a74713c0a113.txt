@@ -1,2 +1,0 @@
-DEBUG    PaddleFormers:zero_cost_checkpoint.py:153 all sharded weight False, any shared weight False
-DEBUG    PaddleFormers:zero_cost_checkpoint.py:155 this is not a sharded state dict, no need to convert.

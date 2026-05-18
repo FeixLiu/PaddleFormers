@@ -1,1 +1,0 @@
-INFO     paddleformers.cli.train.ernie_pretrain.src.utils.training_utils:training_utils.py:37 per_device_train_batch_size=4, global_batch_size=256, dp_worldsize=4, accumulate_steps=16

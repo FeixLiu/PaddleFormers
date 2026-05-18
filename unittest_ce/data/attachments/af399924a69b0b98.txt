@@ -1,3 +1,0 @@
-INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen25vlv2
-INFO     PaddleFormers:image_processing_utils.py:250 loading configuration file preprocessor_config.json from cache at /home/models/PaddleFormers/tiny-random-qwen25vlv2/preprocessor_config.json

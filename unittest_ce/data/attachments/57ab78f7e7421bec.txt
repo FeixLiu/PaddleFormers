@@ -1,3 +1,0 @@
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/ModelHub/Qwen2-7B
-INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio

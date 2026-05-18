@@ -1,3 +1,0 @@
-INFO     PaddleFormers:downloader.py:199 Downloading tokenizer.json from https://bj.bcebos.com/paddlenlp/models/transformers/llama/tokenizer.json
-DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): bj.bcebos.com:443
-DEBUG    urllib3.connectionpool:connectionpool.py:544 https://bj.bcebos.com:443 "GET /paddlenlp/models/transformers/llama/tokenizer.json HTTP/1.1" 200 1842665

@@ -1,2 +1,0 @@
-WARNING  PaddleFormers:template.py:547 `template` was not specified, use `empty` template.
-WARNING  PaddleFormers:template.py:565 suffix is not specified, using eos token as suffix.

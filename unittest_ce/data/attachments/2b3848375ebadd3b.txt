@@ -1,1 +1,0 @@
-INFO     PaddleFormers:file_reader.py:106 Sampled 7 samples from 3 total samples.
