@@ -1,0 +1,16 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): paddlenlp.bj.bcebos.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://paddlenlp.bj.bcebos.com:443 "GET /datasets/paddlemix/demo_images/example1.jpg HTTP/1.1" 200 552828
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'IHDR' 16 13
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'sRGB' 41 1
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'eXIf' 54 68
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'IDAT' 134 16384
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): paddlenlp.bj.bcebos.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://paddlenlp.bj.bcebos.com:443 "GET /datasets/paddlemix/demo_images/example1.jpg HTTP/1.1" 200 552828
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'IHDR' 16 13
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'sRGB' 41 1
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'eXIf' 54 68
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'IDAT' 134 16384
+DEBUG    PIL.TiffImagePlugin:TiffImagePlugin.py:941 tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\x1a'
+DEBUG    PIL.TiffImagePlugin:TiffImagePlugin.py:941 tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+DEBUG    PIL.TiffImagePlugin:TiffImagePlugin.py:941 tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x14'
+DEBUG    PIL.TiffImagePlugin:TiffImagePlugin.py:941 tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x03p'

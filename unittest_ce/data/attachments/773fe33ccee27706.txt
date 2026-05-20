@@ -1,0 +1,2 @@
+INFO     PaddleFormers:topk_gate.py:266 moe use gate_weight from outside
+INFO     PaddleFormers:topk_gate.py:272 moe gate: w/ capacity: [1.0, 1.0, 1.0] experts:8 use_token_type_bias:False gate_act:softmax norm_gate_logits=False use_correction_bias=False

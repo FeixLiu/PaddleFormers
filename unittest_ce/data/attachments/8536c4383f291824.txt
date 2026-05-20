@@ -1,0 +1,1 @@
+WARNING  PaddleFormers:parser.py:249 VLMs training does not support Truncate Packing, we will enforce that truncate_packing=False.

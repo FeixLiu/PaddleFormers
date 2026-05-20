@@ -1,0 +1,2 @@
+INFO     PaddleFormers:video_processing_utils.py:462 Using download source: aistudio
+INFO     PaddleFormers:video_processing_utils.py:517 loading configuration file /tmp/tmpsz1la_1x/preprocessor_config.json

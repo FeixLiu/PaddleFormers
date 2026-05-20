@@ -1,0 +1,30 @@
+INFO     PaddleFormers:testing_utils.py:614 Glm4vMoeProcessorTest [PID:2690] Device: gpu:0
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+INFO     PaddleFormers:processing_utils.py:621 loading configuration file None
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+INFO     PaddleFormers:image_processing_utils.py:248 loading configuration file /tmp/tmpyvtpuoln/preprocessor_config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
+INFO     PaddleFormers:video_processing_utils.py:462 Using download source: aistudio
+INFO     PaddleFormers:video_processing_utils.py:517 loading configuration file /tmp/tmpyvtpuoln/video_preprocessor_config.json
+INFO     PaddleFormers:video_processing_utils.py:449 Video processor saved in /tmp/tmpzyr4zhsk/video_preprocessor_config.json
+INFO     PaddleFormers:processing_utils.py:448 chat template saved in /tmp/tmpzyr4zhsk/chat_template.json
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+INFO     PaddleFormers:processing_utils.py:621 loading configuration file None
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+INFO     PaddleFormers:image_processing_utils.py:248 loading configuration file /tmp/tmpzyr4zhsk/preprocessor_config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
+INFO     PaddleFormers:video_processing_utils.py:462 Using download source: aistudio
+INFO     PaddleFormers:video_processing_utils.py:517 loading configuration file /tmp/tmpzyr4zhsk/video_preprocessor_config.json
+INFO     PaddleFormers:video_processing_utils.py:449 Video processor saved in /tmp/tmptweqqu_c/video_preprocessor_config.json
+INFO     PaddleFormers:processing_utils.py:432 chat template saved in /tmp/tmptweqqu_c/chat_template.jinja
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+INFO     PaddleFormers:processing_utils.py:621 loading configuration file None
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+INFO     PaddleFormers:image_processing_utils.py:248 loading configuration file /tmp/tmptweqqu_c/preprocessor_config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
+INFO     PaddleFormers:video_processing_utils.py:462 Using download source: aistudio
+INFO     PaddleFormers:video_processing_utils.py:517 loading configuration file /tmp/tmptweqqu_c/video_preprocessor_config.json
+INFO     PaddleFormers:video_processing_utils.py:449 Video processor saved in /tmp/tmpxj9cedxp/video_preprocessor_config.json

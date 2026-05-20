@@ -1,0 +1,4 @@
+INFO     PaddleFormers:video_processing_utils.py:462 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen25vlv2
+INFO     PaddleFormers:video_processing_utils.py:519 loading configuration file video_preprocessor_config.json from cache at /home/models/PaddleFormers/tiny-random-qwen25vlv2/preprocessor_config.json
+INFO     PaddleFormers:testing_utils.py:614 TestHFMultiSourceVideoProcessor [PID:2690] Device: gpu:0

@@ -1,0 +1,4 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): paddlenlp.bj.bcebos.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://paddlenlp.bj.bcebos.com:443 "GET /datasets/paddlemix/demo_video/example_video.mp4 HTTP/1.1" 200 17417367
+DEBUG    PaddleFormers:vision_process.py:243 sampling at target_frames=10, frames_sample=middle
+INFO     PaddleFormers:vision_process.py:269 sampling at fps=1, frames_sample=middle

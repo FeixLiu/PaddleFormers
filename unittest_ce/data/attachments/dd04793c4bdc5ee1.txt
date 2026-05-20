@@ -1,0 +1,3 @@
+INFO     PaddleFormers:testing_utils.py:614 Glm4vMoeModelTest [PID:2690] Device: gpu:0
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section'}
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False

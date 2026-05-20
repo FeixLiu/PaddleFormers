@@ -1,0 +1,12 @@
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny_random_ernie4_5_vl
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny_random_ernie4_5_vl
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny_random_ernie4_5_vl
+INFO     PaddleFormers:processing_utils.py:623 loading configuration file processor_config.json from cache at None
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny_random_ernie4_5_vl
+INFO     PaddleFormers:image_processing_utils.py:250 loading configuration file preprocessor_config.json from cache at /home/models/PaddleFormers/tiny_random_ernie4_5_vl/preprocessor_config.json
+WARNING  PaddleFormers:log.py:135 The model's image processor only supports the slow version. Falling back to the slow version (`use_fast=False`) even though `use_fast=True` is the default. 
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny_random_ernie4_5_vl
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
+INFO     PaddleFormers:processing_utils.py:464 processor saved in /tmp/tmp9rhe98cb/processor_config.json
