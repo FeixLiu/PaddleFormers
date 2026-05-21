@@ -1,0 +1,1 @@
+INFO     PaddleFormers:testing_utils.py:614 Phi3ModelTest [PID:2682] Device: gpu:0

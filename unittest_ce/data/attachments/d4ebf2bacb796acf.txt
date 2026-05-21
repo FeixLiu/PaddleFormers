@@ -1,3 +1,0 @@
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3omni
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3omni
-INFO     PaddleFormers:feature_extraction_utils.py:300 Feature extractor saved in /tmp/tmphqmx6_vj/preprocessor_config.json

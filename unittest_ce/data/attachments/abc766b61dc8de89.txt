@@ -1,8 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 Qwen2IntegrationTest [PID:2690] Device: gpu:0
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen2v2
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /home/models/PaddleFormers/tiny-random-qwen2v2/config.json
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen2v2
-INFO     PaddleFormers:model_utils.py:2157 Loading weights file from cache at /home/models/PaddleFormers/tiny-random-qwen2v2/model.safetensors
-INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False

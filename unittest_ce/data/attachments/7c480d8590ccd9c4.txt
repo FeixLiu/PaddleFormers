@@ -1,3 +1,0 @@
-INFO     paddleformers.transformers.kimi_k2.tokenizer:tokenizer.py:115 Reloaded tiktoken model from /tmp/tmpw6sdvni0/tiktoken.model
-INFO     paddleformers.transformers.kimi_k2.tokenizer:tokenizer.py:121 #words: 262 - BOS ID: 4 - EOS ID: 5
-WARNING  paddleformers.transformers.kimi_k2.tokenizer:tokenizer.py:165 Calling super().encode with {'add_special_tokens': True}

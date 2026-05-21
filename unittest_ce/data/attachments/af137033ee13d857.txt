@@ -1,4 +1,0 @@
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmp7jbepep0/config.json
-WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section'}
-INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmp7jbepep0/model.safetensors

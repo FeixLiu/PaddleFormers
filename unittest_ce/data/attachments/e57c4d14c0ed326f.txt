@@ -1,4 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 GptOssModelTest [PID:2690] Device: gpu:0
-INFO     PaddleFormers:configuration_utils.py:1059 Configuration saved in /tmp/tmpnwx50j3o/config.json
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmpnwx50j3o/model_config.json

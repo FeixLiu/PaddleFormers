@@ -1,0 +1,7 @@
+INFO     PaddleFormers:testing_utils.py:614 Ernie4_5CompatibilityTest [PID:2682] Device: gpu:0
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmpbalek2j5/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmpbalek2j5/model.safetensors
+INFO     PaddleFormers:modeling.py:780 change initializer-range from 0.02 to 0.1443303502386106
+WARNING  PaddleFormers:log.py:135 use GQA - num_heads: 2- num_key_value_heads: 1
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False

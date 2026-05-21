@@ -1,1 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 Glm4MoeModelTest [PID:2690] Device: gpu:0

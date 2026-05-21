@@ -1,3 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 GptOssModelTest [PID:2690] Device: gpu:0
-WARNING  PaddleFormers:log.py:135 config.rope_parameters['original_max_position_embeddings'], the pre-yarn context length, is unset. We will **assume** config.max_position_embeddings holds the pre-yarn context length. Some use cases may expect config.max_position_embeddings to hold the post-yarn context length (pre-yarn context length * factor) -- we recommend updating both fields for optimal downstream model usage.
-INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False

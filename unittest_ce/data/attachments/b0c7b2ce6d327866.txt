@@ -1,1 +1,0 @@
-DEBUG    paddleformers.utils.download.common:common.py:447 Creating pointer from src.txt to /tmp/tmpqkm17ex8/dst.txt

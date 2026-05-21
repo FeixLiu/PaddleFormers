@@ -1,0 +1,100 @@
+INFO     PaddleFormers:model_utils.py:3896 [Rank 0/1] (Saver) Initializing save. Max shard size set to: 10.00 GB
+INFO     PaddleFormers:model_utils.py:3931 [Rank 0/1] Starting to process the weight iterator...
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter lm_head.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.embed_tokens.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.input_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.mlp.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.mlp.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.mlp.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.post_attention_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.k_norm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.k_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.o_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.q_norm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.q_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.v_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.input_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.post_attention_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.k_norm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.k_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.o_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.q_norm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.q_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.v_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.norm.weight
+INFO     PaddleFormers:model_utils.py:3917 [Rank 0/1] Saving sub-shard 0... Size: 37.94 MB, Params: 25, Path: /tmp/tmp98akaj8s/base_model/shard_0-0.safetensors
+INFO     PaddleFormers:model_utils.py:3949 [Rank 0/1] (Saver) All shards saved successfully.
+INFO     PaddleFormers:configuration_utils.py:1059 Configuration saved in /tmp/tmp98akaj8s/base_model/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmp98akaj8s/base_model/model.safetensors.index.json
+WARNING  PaddleFormers:model_utils.py:1161 There are unrelated safetensors files in the current folder, which may break the consistency of Huggingface format weights. They will be deleted automatically.
+INFO     PaddleFormers:model_utils.py:3896 [Rank 0/1] (Saver) Initializing save. Max shard size set to: 10.00 GB
+INFO     PaddleFormers:model_utils.py:3931 [Rank 0/1] Starting to process the weight iterator...
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter lm_head.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.embed_tokens.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.input_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.mlp.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.mlp.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.mlp.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.post_attention_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.k_norm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.k_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.o_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.q_norm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.q_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.v_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.input_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.post_attention_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.k_norm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.k_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.o_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.q_norm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.q_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.v_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.norm.weight
+INFO     PaddleFormers:model_utils.py:3917 [Rank 0/1] Saving sub-shard 0... Size: 37.94 MB, Params: 25, Path: /tmp/tmp98akaj8s/base_model/shard_0-0.safetensors
+INFO     PaddleFormers:model_utils.py:3949 [Rank 0/1] (Saver) All shards saved successfully.
+INFO     PaddleFormers:configuration_utils.py:1059 Configuration saved in /tmp/tmp98akaj8s/base_model/config.json
+WARNING  PaddleFormers:lora_model.py:274 Reset tensor_model_parallel_size of lora_config to 1.
+INFO     PaddleFormers:lora_model.py:283 Mark only lora and trainable_module as trainable.
+INFO     PaddleFormers:lora_model.py:611 Saving LoRA weights use safetensors: True
+INFO     PaddleFormers:model_utils.py:3896 [Rank 0/1] (Saver) Initializing save. Max shard size set to: 4.00 GB
+INFO     PaddleFormers:model_utils.py:3931 [Rank 0/1] Starting to process the weight iterator...
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.mlp.down_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.mlp.down_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.mlp.up_gate_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.mlp.up_gate_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.self_attn.o_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.self_attn.o_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.self_attn.qkv_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 1.self_attn.qkv_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.mlp.down_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.mlp.down_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.mlp.up_gate_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.mlp.up_gate_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.self_attn.o_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.self_attn.o_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.self_attn.qkv_proj.lora_A
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter 2.self_attn.qkv_proj.lora_B
+INFO     PaddleFormers:model_utils.py:3917 [Rank 0/1] Saving sub-shard 0... Size: 0.23 MB, Params: 16, Path: /tmp/tmp98akaj8s/lora_model/shard_0-0.safetensors
+INFO     PaddleFormers:model_utils.py:3949 [Rank 0/1] (Saver) All shards saved successfully.
+INFO     PaddleFormers:configuration_utils.py:1059 Configuration saved in /tmp/tmp98akaj8s/lora_model/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmp98akaj8s/base_model/config.json
+INFO     PaddleFormers:merge_model.py:754 Merging file list: ['model-00001-of-00001.safetensors']
+INFO     PaddleFormers:merge_model.py:756 Start merging tensor in model-00001-of-00001.safetensors
+INFO     PaddleFormers:merge_model.py:621 Load LoRA weight successfully.
+INFO     PaddleFormers:merge_model.py:625 Load model weight successfully.
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmp98akaj8s/lora_model/config.json
+INFO     PaddleFormers:merge_model.py:637 Don't find quantization_config in config.json, skip quantize-dequantize base model.
+INFO     PaddleFormers:merge_model.py:696 Merge tensors successfully.
+INFO     PaddleFormers:merge_model.py:703 Model weights saved in /tmp/tmp98akaj8s/merged_model/model-00001-of-00001.safetensors.
+INFO     PaddleFormers:merge_model.py:803 Model index file saved in /tmp/tmp98akaj8s/merged_model/model.safetensors.index.json.
+INFO     PaddleFormers:merge_config.py:152 Merge config file saved in /tmp/tmp98akaj8s/merged_model/merge_config.json.

@@ -1,0 +1,4 @@
+INFO     PaddleFormers:testing_utils.py:614 Ernie4_5ModelTest [PID:2682] Device: gpu:0
+INFO     PaddleFormers:configuration_utils.py:1059 Configuration saved in /tmp/tmp7ml8f73c/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmp7ml8f73c/model_config.json

@@ -1,3 +1,0 @@
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmp2xh15y44/custom_model/config.json

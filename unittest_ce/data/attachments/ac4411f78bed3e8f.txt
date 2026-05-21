@@ -1,0 +1,1 @@
+INFO     PaddleFormers:configuration_utils.py:1059 Configuration saved in /tmp/tmp60lu717i/config.json

@@ -1,0 +1,7 @@
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+INFO     PaddleFormers:processing_utils.py:621 loading configuration file /tmp/tmp2dsh845b/processor_config.json
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+INFO     PaddleFormers:processing_utils.py:621 loading configuration file /tmp/tmp2dsh845b/processor_config.json
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+INFO     PaddleFormers:image_processing_utils.py:248 loading configuration file /tmp/tmp2dsh845b/preprocessor_config.json
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio

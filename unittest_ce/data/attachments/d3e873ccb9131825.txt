@@ -1,2 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 TestQwenVisionProcessing [PID:2690] Device: gpu:0
-INFO     PaddleFormers:vision_process.py:251 calculate video frame range: start_frame=30, end_frame=90, total_frames=100 from video_start=1.0, video_end=3.0, video_fps=30.000

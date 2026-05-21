@@ -1,0 +1,10 @@
+INFO     PaddleFormers:testing_utils.py:614 Glm4vMoeIntegrationTest [PID:2682] Device: gpu:0
+WARNING  PaddleFormers:log.py:135 SmolVLM requires frame timestamps to construct prompts, but the `fps` of the input video could not be inferred. Probably `video_metadata` was missing from inputs and you passed pre-sampled frames. Defaulting to `fps=24`. Please provide `video_metadata` for more accurate results.
+INFO     PaddleFormers:test_modeling.py:752 Output logits slice5:
+Tensor(shape=[30], dtype=float32, place=Place(gpu:0), stop_gradient=False,
+       [-0.15688273,  0.19189692, -0.04779439,  0.12130003,  0.05779983,
+         0.01867276, -0.08718628,  0.00412212, -0.00299725, -0.19910379,
+         0.13009506, -0.02575452, -0.06698672,  0.09728099, -0.04755851,
+         0.02679707,  0.04504703, -0.18297489, -0.12732549,  0.09187511,
+        -0.09503223,  0.00089179, -0.18773372,  0.02653121, -0.15472701,
+        -0.09835965, -0.09493157,  0.15674049,  0.07875320,  0.06682327])
