@@ -1,4 +1,0 @@
-INFO     PaddleFormers:configuration_utils.py:1059 Configuration saved in /tmp/tmpw1hm1jky/config.json
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmpw1hm1jky/config.json

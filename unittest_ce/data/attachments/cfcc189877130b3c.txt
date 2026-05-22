@@ -1,0 +1,4 @@
+INFO     PaddleFormers:testing_utils.py:614 Qwen3MoeModelTest [PID:2682] Device: gpu:0
+INFO     PaddleFormers:configuration_utils.py:1059 Configuration saved in /tmp/tmp3hp60ta7/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmp3hp60ta7/model_config.json

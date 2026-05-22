@@ -1,0 +1,26 @@
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen25vlv2
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen25vlv2
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen25vlv2
+INFO     PaddleFormers:processing_utils.py:623 loading configuration file processor_config.json from cache at None
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen25vlv2
+INFO     PaddleFormers:image_processing_utils.py:250 loading configuration file preprocessor_config.json from cache at /home/models/PaddleFormers/tiny-random-qwen25vlv2/preprocessor_config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen25vlv2
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
+INFO     PaddleFormers:video_processing_utils.py:462 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen25vlv2
+INFO     PaddleFormers:video_processing_utils.py:519 loading configuration file video_preprocessor_config.json from cache at /home/models/PaddleFormers/tiny-random-qwen25vlv2/preprocessor_config.json
+INFO     PaddleFormers:video_processing_utils.py:449 Video processor saved in /tmp/tmpusmk37pk/video_preprocessor_config.json
+INFO     PaddleFormers:processing_utils.py:432 chat template saved in /tmp/tmpusmk37pk/chat_template.jinja
+INFO     PaddleFormers:testing_utils.py:614 Qwen2_5_VLProcessorTest [PID:2682] Device: gpu:0
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+INFO     PaddleFormers:image_processing_utils.py:248 loading configuration file /tmp/tmpusmk37pk/preprocessor_config.json
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+INFO     PaddleFormers:processing_utils.py:621 loading configuration file None
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+INFO     PaddleFormers:image_processing_utils.py:248 loading configuration file /tmp/tmpusmk37pk/preprocessor_config.json
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
+INFO     PaddleFormers:video_processing_utils.py:462 Using download source: aistudio
+INFO     PaddleFormers:video_processing_utils.py:517 loading configuration file /tmp/tmpusmk37pk/video_preprocessor_config.json

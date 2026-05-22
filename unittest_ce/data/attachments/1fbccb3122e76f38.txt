@@ -1,0 +1,7 @@
+INFO     PaddleFormers:testing_utils.py:614 Phi3ModelTest [PID:2682] Device: gpu:0
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+INFO     PaddleFormers:configuration_utils.py:1059 Configuration saved in /tmp/tmpv79vqxke/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmpv79vqxke/model_config.json
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}

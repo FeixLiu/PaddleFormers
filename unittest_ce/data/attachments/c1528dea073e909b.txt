@@ -1,0 +1,10 @@
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /home/models/PaddleFormers/tiny-random-glm4moe-bf16/config.json
+WARNING  PaddleFormers:modeling_rope_utils.py:674 Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'partial_rotary_factor'}
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
+INFO     PaddleFormers:SFTDataset.py:70 self.dataset_num_proc: 1
+INFO     PaddleFormers:SFTDataset.py:103 [dataflow] truncation_strategy: delete
+INFO     PaddleFormers:SFTDataset.py:128 self.num_reserved_tokens_for_each_dialog: 2
+INFO     PaddleFormers:file_reader.py:108 Loading /workspace/PaddleFormers/tests/fixtures/dummy/sft/train.jsonl as stream.
+INFO     PaddleFormers:SFTDataset.py:506 Using greedy packing mode for data iteration.

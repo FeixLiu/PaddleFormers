@@ -1,0 +1,12 @@
+INFO     PaddleFormers:configuration_utils.py:1059 Configuration saved in /tmp/tmp9227mmt8/config.json
+INFO     PaddleFormers:model_utils.py:3395 Model weights saved in /tmp/tmp9227mmt8/model_state.pdparams
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:modeling.py:297 We are using <class 'paddleformers.transformers.llama.modeling.LlamaModel'> to load '/tmp/tmp9227mmt8'.
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmp9227mmt8/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmp9227mmt8/model_state.pdparams
+INFO     PaddleFormers:model_utils.py:3007 Loaded weights file from disk, setting weights to model.
+INFO     PaddleFormers:model_utils.py:2669 All model checkpoint weights were used when initializing LlamaModel.
+
+INFO     PaddleFormers:model_utils.py:2678 All the weights of LlamaModel were initialized from the model checkpoint at /tmp/tmp9227mmt8.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use LlamaModel for predictions without further training.

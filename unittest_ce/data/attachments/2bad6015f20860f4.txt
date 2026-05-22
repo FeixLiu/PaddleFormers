@@ -1,7 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 Qwen3VLProcessorTest [PID:2682] Device: gpu:0
-INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
-INFO     PaddleFormers:image_processing_utils.py:248 loading configuration file /tmp/tmp3sklqoix/preprocessor_config.json
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
-INFO     PaddleFormers:video_processing_utils.py:462 Using download source: aistudio
-INFO     PaddleFormers:video_processing_utils.py:517 loading configuration file /tmp/tmp3sklqoix/video_preprocessor_config.json

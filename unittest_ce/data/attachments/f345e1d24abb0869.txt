@@ -1,4 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 Qwen2_5_VLCompatibilityTest [PID:2682] Device: gpu:0
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmpqu8yz_ed/config.json
-INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmpqu8yz_ed/model.safetensors

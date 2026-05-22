@@ -1,4 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 KimiK2ModelTest [PID:2682] Device: gpu:0
-INFO     PaddleFormers:configuration_utils.py:1059 Configuration saved in /tmp/tmptk9gpnoa/config.json
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmptk9gpnoa/model_config.json

@@ -1,0 +1,51 @@
+INFO     PaddleFormers:testing_utils.py:614 Qwen3VLMoeIntegrationTest [PID:2682] Device: gpu:0
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /home/models/PaddleFormers/tiny-random-qwen3vlmoev2/config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+INFO     PaddleFormers:model_utils.py:2157 Loading weights file from cache at /home/models/PaddleFormers/tiny-random-qwen3vlmoev2/model.safetensors
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+INFO     PaddleFormers:processing_utils.py:623 loading configuration file processor_config.json from cache at /home/models/PaddleFormers/tiny-random-qwen3vlmoev2/processor_config.json
+INFO     PaddleFormers:processing_utils.py:499 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+INFO     PaddleFormers:processing_utils.py:623 loading configuration file processor_config.json from cache at /home/models/PaddleFormers/tiny-random-qwen3vlmoev2/processor_config.json
+INFO     PaddleFormers:image_processing_utils.py:190 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+INFO     PaddleFormers:image_processing_utils.py:250 loading configuration file preprocessor_config.json from cache at /home/models/PaddleFormers/tiny-random-qwen3vlmoev2/processor_config.json
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
+INFO     PaddleFormers:video_processing_utils.py:462 Using download source: aistudio
+WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3vlmoev2
+INFO     PaddleFormers:video_processing_utils.py:519 loading configuration file video_preprocessor_config.json from cache at /home/models/PaddleFormers/tiny-random-qwen3vlmoev2/processor_config.json
+DEBUG    urllib3.connectionpool:connectionpool.py:1062 Starting new HTTPS connection (1): paddlenlp.bj.bcebos.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:544 https://paddlenlp.bj.bcebos.com:443 "GET /datasets/paddlemix/demo_images/example1.jpg HTTP/1.1" 200 552828
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'IHDR' 16 13
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'sRGB' 41 1
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'eXIf' 54 68
+DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:204 STREAM b'IDAT' 134 16384
+DEBUG    httpcore.connection:_trace.py:47 connect_tcp.started host='paddlenlp.bj.bcebos.com' port=80 local_address=None timeout=5.0 socket_options=None
+DEBUG    httpcore.connection:_trace.py:47 connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f7d883dd2e0>
+DEBUG    httpcore.http11:_trace.py:47 send_request_headers.started request=<Request [b'GET']>
+DEBUG    httpcore.http11:_trace.py:47 send_request_headers.complete
+DEBUG    httpcore.http11:_trace.py:47 send_request_body.started request=<Request [b'GET']>
+DEBUG    httpcore.http11:_trace.py:47 send_request_body.complete
+DEBUG    httpcore.http11:_trace.py:47 receive_response_headers.started request=<Request [b'GET']>
+DEBUG    httpcore.http11:_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 22 May 2026 17:19:10 GMT'), (b'Content-Type', b'video/mp4'), (b'Content-Length', b'17417367'), (b'Connection', b'keep-alive'), (b'Accept-Ranges', b'bytes'), (b'Content-MD5', b'kCpAAaHHOrsMoNl+iSfQNg=='), (b'ETag', b'"902a4001a1c73abb0ca0d97e8927d036"'), (b'Expires', b'Mon, 25 May 2026 17:19:10 GMT'), (b'Last-Modified', b'Fri, 25 Apr 2025 07:40:20 GMT'), (b'Server', b'BceBos'), (b'x-bce-content-crc32', b'4293727771'), (b'x-bce-debug-id', b'nzxgYbJHUmSyFeqXZu5Ol24mTYsC8EuiJK70qEqsvC31QiTnwdbaqs8ZK1KT6VfHnnPHJDlCaYAH0AQ6g9Wx6w=='), (b'x-bce-flow-control-type', b'-1'), (b'x-bce-is-transition', b'false'), (b'x-bce-meta-md5', b'kCpAAaHHOrsMoNl+iSfQNg=='), (b'x-bce-request-id', b'23440d1b-de93-41cd-ac96-d0d85fd4a492'), (b'x-bce-storage-class', b'STANDARD')])
+INFO     httpx:_client.py:1025 HTTP Request: GET http://paddlenlp.bj.bcebos.com/datasets/paddlemix/demo_video/example_video.mp4 "HTTP/1.1 200 OK"
+DEBUG    httpcore.http11:_trace.py:47 receive_response_body.started request=<Request [b'GET']>
+DEBUG    httpcore.http11:_trace.py:47 receive_response_body.complete
+DEBUG    httpcore.http11:_trace.py:47 response_closed.started
+DEBUG    httpcore.http11:_trace.py:47 response_closed.complete
+DEBUG    httpcore.connection:_trace.py:47 close.started
+DEBUG    httpcore.connection:_trace.py:47 close.complete
+INFO     PaddleFormers:video_utils.py:332 Loading video with paddlecodec backend.
+INFO     PaddleFormers:video_utils.py:334 set PADDLECODEC_NUM_THREADS: 0 (Auto)
+INFO     PaddleFormers:video_utils.py:360 paddlecodec:  video_path=<_io.BytesIO object at 0x7f874f99fba0>, total_num_frames=263, video_fps=29.99418249715141, time=4.886s

@@ -1,0 +1,5 @@
+INFO     PaddleFormers:testing_utils.py:614 Qwen3VLCompatibilityTest [PID:2682] Device: gpu:0
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmpv92d3gps/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmpv92d3gps/model.safetensors
+INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False

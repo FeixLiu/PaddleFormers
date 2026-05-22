@@ -1,0 +1,9 @@
+INFO     PaddleFormers:SFTDataset.py:70 self.dataset_num_proc: 1
+INFO     PaddleFormers:SFTDataset.py:103 [dataflow] truncation_strategy: delete
+INFO     PaddleFormers:SFTDataset.py:128 self.num_reserved_tokens_for_each_dialog: 3
+INFO     PaddleFormers:file_reader.py:108 Loading /workspace/PaddleFormers/tests/fixtures/dummy/sft/train.jsonl as stream.
+INFO     PaddleFormers:SFTDataset.py:972 [MapSFTDataset] Total samples: 10
+WARNING  PaddleFormers:SFTDataset.py:1064 [MapSFTDataset] Failed to load packed_idx cache from /tmp/tmp2lsf2r8o/train_packed_idx.npz: Cannot load file containing pickled data when allow_pickle=False. Recomputing.
+INFO     PaddleFormers:SFTDataset.py:1010 [MapSFTDataset] Computing token lengths for bin packing...
+INFO     PaddleFormers:SFTDataset.py:1037 [MapSFTDataset] 10 valid samples -> 2 packed groups.
+INFO     PaddleFormers:SFTDataset.py:1084 [MapSFTDataset] Saved packed_idx cache to /tmp/tmp2lsf2r8o/train_packed_idx.npz: 2 groups

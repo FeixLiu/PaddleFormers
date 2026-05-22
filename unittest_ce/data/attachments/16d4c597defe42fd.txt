@@ -1,0 +1,831 @@
+INFO     PaddleFormers:training_args.py:1767 fa_version = 2 set FLAGS_flash_attn_version to 2
+INFO     PaddleFormers:training_args.py:2745 Auto set hybrid_parallel_expert_grad_scale = 1.0
+INFO     PaddleFormers:trainer_utils.py:327 The global seed is set to 42, local seed is set to 43 and random seed is set to 42.
+INFO     PaddleFormers:trainer.py:623 Using half precision
+DEBUG    PaddleFormers:trainer.py:5319 ============================================================
+DEBUG    PaddleFormers:trainer.py:5325     Training Configuration Arguments    
+DEBUG    PaddleFormers:trainer.py:5326 paddle commit id              : ea660cfb3c080a91e73995b94802505df909ed62
+DEBUG    PaddleFormers:trainer.py:5327 paddleformers commit id       : da1ffabcabefb6c4bdb60d521092e5260e04bb27
+DEBUG    PaddleFormers:trainer.py:5331 paddlefleet commit id         : f75afe5cf43434ae339d03115b233aa0e82fb3a6
+DEBUG    PaddleFormers:trainer.py:5337 _no_sync_in_gradient_accumulation: True
+DEBUG    PaddleFormers:trainer.py:5337 adam_beta1                    : 0.9
+DEBUG    PaddleFormers:trainer.py:5337 adam_beta2                    : 0.999
+DEBUG    PaddleFormers:trainer.py:5337 adam_epsilon                  : 1e-08
+DEBUG    PaddleFormers:trainer.py:5337 amp_custom_black_list         : ['reduce_sum', 'softmax_with_cross_entropy', 'c_softmax_with_cross_entropy', 'elementwise_div', 'sin', 'cos']
+DEBUG    PaddleFormers:trainer.py:5337 amp_custom_white_list         : ['lookup_table', 'lookup_table_v2', 'flash_attn', 'matmul', 'matmul_v2', 'fused_gemm_epilogue']
+DEBUG    PaddleFormers:trainer.py:5337 amp_master_grad               : True
+DEBUG    PaddleFormers:trainer.py:5337 aoa_config                    : None
+DEBUG    PaddleFormers:trainer.py:5337 auto_parallel_resume_form_hybrid_parallel: False
+DEBUG    PaddleFormers:trainer.py:5337 auto_parallel_sync_shared_params: False
+DEBUG    PaddleFormers:trainer.py:5337 batch_p2p_comm                : True
+DEBUG    PaddleFormers:trainer.py:5337 best_unbalanced_scheduler     : False
+DEBUG    PaddleFormers:trainer.py:5337 bf16                          : True
+DEBUG    PaddleFormers:trainer.py:5337 bf16_full_eval                : False
+DEBUG    PaddleFormers:trainer.py:5337 ckpt_quant_stage              : O0
+DEBUG    PaddleFormers:trainer.py:5337 clear_every_step_cache        : False
+DEBUG    PaddleFormers:trainer.py:5337 context_parallel_rank         : 0
+DEBUG    PaddleFormers:trainer.py:5337 context_parallel_size         : -1
+DEBUG    PaddleFormers:trainer.py:5337 convert_from_hf               : True
+DEBUG    PaddleFormers:trainer.py:5337 count_trained_tokens          : False
+DEBUG    PaddleFormers:trainer.py:5337 cp_comm_type                  : None
+DEBUG    PaddleFormers:trainer.py:5337 cp_sharding_degree            : 1
+DEBUG    PaddleFormers:trainer.py:5337 cp_sharding_rank              : 0
+DEBUG    PaddleFormers:trainer.py:5337 current_device                : gpu:0
+DEBUG    PaddleFormers:trainer.py:5337 data_parallel_config          : 
+DEBUG    PaddleFormers:trainer.py:5337 data_parallel_rank            : 0
+DEBUG    PaddleFormers:trainer.py:5337 data_parallel_size            : 1
+DEBUG    PaddleFormers:trainer.py:5337 dataloader_drop_last          : False
+DEBUG    PaddleFormers:trainer.py:5337 dataloader_num_workers        : 0
+DEBUG    PaddleFormers:trainer.py:5337 dataloader_shuffle            : True
+DEBUG    PaddleFormers:trainer.py:5337 dataset_rank                  : 0
+DEBUG    PaddleFormers:trainer.py:5337 dataset_world_size            : 1
+DEBUG    PaddleFormers:trainer.py:5337 ddp_find_unused_parameters    : None
+DEBUG    PaddleFormers:trainer.py:5337 deterministic_mode            : False
+DEBUG    PaddleFormers:trainer.py:5337 device                        : gpu
+DEBUG    PaddleFormers:trainer.py:5337 disable_tqdm                  : False
+DEBUG    PaddleFormers:trainer.py:5337 distributed_dataloader        : False
+DEBUG    PaddleFormers:trainer.py:5337 do_eval                       : False
+DEBUG    PaddleFormers:trainer.py:5337 do_export                     : False
+DEBUG    PaddleFormers:trainer.py:5337 do_predict                    : False
+DEBUG    PaddleFormers:trainer.py:5337 do_train                      : False
+DEBUG    PaddleFormers:trainer.py:5337 dp_allreduce_avg_in_gradinent_scale: False
+DEBUG    PaddleFormers:trainer.py:5337 dp_comm_overlap               : False
+DEBUG    PaddleFormers:trainer.py:5337 dsa_indexer_loss_coeff        : 0.01
+DEBUG    PaddleFormers:trainer.py:5337 enable_auto_parallel          : False
+DEBUG    PaddleFormers:trainer.py:5337 enable_zero_cost_checkpoint   : False
+DEBUG    PaddleFormers:trainer.py:5337 eval_accumulation_steps       : None
+DEBUG    PaddleFormers:trainer.py:5337 eval_batch_size               : 8
+DEBUG    PaddleFormers:trainer.py:5337 eval_steps                    : None
+DEBUG    PaddleFormers:trainer.py:5337 evaluation_strategy           : IntervalStrategy.NO
+DEBUG    PaddleFormers:trainer.py:5337 expert_model_parallel_size    : -1
+DEBUG    PaddleFormers:trainer.py:5337 expert_parallel_rank          : 0
+DEBUG    PaddleFormers:trainer.py:5337 expert_tensor_model_parallel_size: -1
+DEBUG    PaddleFormers:trainer.py:5337 fa_version                    : 2
+DEBUG    PaddleFormers:trainer.py:5337 flash_device_save_steps       : 0
+DEBUG    PaddleFormers:trainer.py:5337 flatten_param_grads           : False
+DEBUG    PaddleFormers:trainer.py:5337 flex_ckpt_comm_method         : None
+DEBUG    PaddleFormers:trainer.py:5337 force_reshard_pp              : False
+DEBUG    PaddleFormers:trainer.py:5337 forward_backward_overlap_scheduler: False
+DEBUG    PaddleFormers:trainer.py:5337 fp16                          : False
+DEBUG    PaddleFormers:trainer.py:5337 fp16_full_eval                : False
+DEBUG    PaddleFormers:trainer.py:5337 fp16_opt_level                : O1
+DEBUG    PaddleFormers:trainer.py:5337 freeze_training               : False
+DEBUG    PaddleFormers:trainer.py:5337 fuse_optimizer_states         : False
+DEBUG    PaddleFormers:trainer.py:5337 fuse_sequence_parallel_allreduce: False
+DEBUG    PaddleFormers:trainer.py:5337 gradient_accumulation_steps   : 1
+DEBUG    PaddleFormers:trainer.py:5337 gradient_sync_after_accumulate: False
+DEBUG    PaddleFormers:trainer.py:5337 greater_is_better             : None
+DEBUG    PaddleFormers:trainer.py:5337 hybrid_parallel_expert_grad_scale: 1.0
+DEBUG    PaddleFormers:trainer.py:5337 hybrid_parallel_topo_order    : sharding_first
+DEBUG    PaddleFormers:trainer.py:5337 ignore_data_skip              : False
+DEBUG    PaddleFormers:trainer.py:5337 ignore_load_lr_and_optim      : False
+DEBUG    PaddleFormers:trainer.py:5337 ignore_save_lr_and_optim      : False
+DEBUG    PaddleFormers:trainer.py:5337 label_names                   : None
+DEBUG    PaddleFormers:trainer.py:5337 lazy_data_processing          : True
+DEBUG    PaddleFormers:trainer.py:5337 learning_rate                 : 5e-05
+DEBUG    PaddleFormers:trainer.py:5337 load_best_model_at_end        : False
+DEBUG    PaddleFormers:trainer.py:5337 load_checkpoint_format        : flex_checkpoint
+DEBUG    PaddleFormers:trainer.py:5337 load_from_hf                  : False
+DEBUG    PaddleFormers:trainer.py:5337 load_sharded_model            : False
+DEBUG    PaddleFormers:trainer.py:5337 load_sharded_model_remap_parameter_name: False
+DEBUG    PaddleFormers:trainer.py:5337 load_via_cpu                  : True
+DEBUG    PaddleFormers:trainer.py:5337 local_process_index           : 0
+DEBUG    PaddleFormers:trainer.py:5337 local_rank                    : -1
+DEBUG    PaddleFormers:trainer.py:5337 log_level                     : -1
+DEBUG    PaddleFormers:trainer.py:5337 log_level_replica             : -1
+DEBUG    PaddleFormers:trainer.py:5337 log_on_each_node              : True
+DEBUG    PaddleFormers:trainer.py:5337 logging_dir                   : /tmp/tmplfnbp1t9/runs/May22_17-01-49_yq01-inf-hic-k8s-a100-aa24-0583.yq01.baidu.com
+DEBUG    PaddleFormers:trainer.py:5337 logging_first_step            : False
+DEBUG    PaddleFormers:trainer.py:5337 logging_steps                 : 500
+DEBUG    PaddleFormers:trainer.py:5337 logging_strategy              : IntervalStrategy.STEPS
+DEBUG    PaddleFormers:trainer.py:5337 logical_process_index         : 0
+DEBUG    PaddleFormers:trainer.py:5337 lr_end                        : 1e-07
+DEBUG    PaddleFormers:trainer.py:5337 lr_scheduler_type             : SchedulerType.LINEAR
+DEBUG    PaddleFormers:trainer.py:5337 max_evaluate_steps            : -1
+DEBUG    PaddleFormers:trainer.py:5337 max_grad_norm                 : 1.0
+DEBUG    PaddleFormers:trainer.py:5337 max_steps                     : -1
+DEBUG    PaddleFormers:trainer.py:5337 metric_for_best_model         : None
+DEBUG    PaddleFormers:trainer.py:5337 metrics_output_path           : None
+DEBUG    PaddleFormers:trainer.py:5337 min_lr                        : 0.0
+DEBUG    PaddleFormers:trainer.py:5337 minimum_eval_times            : None
+DEBUG    PaddleFormers:trainer.py:5337 moe_router_bias_update_rate   : 0.0
+DEBUG    PaddleFormers:trainer.py:5337 moe_sharding_parallel_rank    : 0
+DEBUG    PaddleFormers:trainer.py:5337 mp_async_allreduce            : False
+DEBUG    PaddleFormers:trainer.py:5337 mp_fused_linear_param_grad_add: False
+DEBUG    PaddleFormers:trainer.py:5337 mp_skip_c_identity            : False
+DEBUG    PaddleFormers:trainer.py:5337 mtp_distillation_loss         : False
+DEBUG    PaddleFormers:trainer.py:5337 mtp_num_layers                : 0
+DEBUG    PaddleFormers:trainer.py:5337 muon_exclude_patterns         : ['embed', 'bias', 'lm_head', 'mlp.gate']
+DEBUG    PaddleFormers:trainer.py:5337 muon_extra_scale_factor       : 0.2
+DEBUG    PaddleFormers:trainer.py:5337 muon_ffn_split                : True
+DEBUG    PaddleFormers:trainer.py:5337 muon_momentum                 : 0.95
+DEBUG    PaddleFormers:trainer.py:5337 muon_ns_coeff_type            : quintic
+DEBUG    PaddleFormers:trainer.py:5337 muon_ns_coeffs                : None
+DEBUG    PaddleFormers:trainer.py:5337 muon_ns_steps                 : 5
+DEBUG    PaddleFormers:trainer.py:5337 muon_qkv_update_mode          : split_head
+DEBUG    PaddleFormers:trainer.py:5337 muon_version                  : 3
+DEBUG    PaddleFormers:trainer.py:5337 nccl_comm_group_config        : None
+DEBUG    PaddleFormers:trainer.py:5337 no_cuda                       : False
+DEBUG    PaddleFormers:trainer.py:5337 non_batch_p2p_comm            : False
+DEBUG    PaddleFormers:trainer.py:5337 num_cycles                    : 0.5
+DEBUG    PaddleFormers:trainer.py:5337 num_nextn_predict_layers      : 0
+DEBUG    PaddleFormers:trainer.py:5337 num_train_epochs              : 1.0
+DEBUG    PaddleFormers:trainer.py:5337 offload_fp8_expert_master_weight: True
+DEBUG    PaddleFormers:trainer.py:5337 offload_queue                 : False
+DEBUG    PaddleFormers:trainer.py:5337 online_merge_ema              : True
+DEBUG    PaddleFormers:trainer.py:5337 optim                         : OptimizerNames.ADAMW
+DEBUG    PaddleFormers:trainer.py:5337 optim_shard_num               : 1
+DEBUG    PaddleFormers:trainer.py:5337 optimizer_name_suffix         : None
+DEBUG    PaddleFormers:trainer.py:5337 ordered_save_group_size       : 0
+DEBUG    PaddleFormers:trainer.py:5337 output_dir                    : /tmp/tmplfnbp1t9
+DEBUG    PaddleFormers:trainer.py:5337 output_signal_dir             : /tmp/tmplfnbp1t9
+DEBUG    PaddleFormers:trainer.py:5337 overlap                       : False
+DEBUG    PaddleFormers:trainer.py:5337 overlap_p2p_comm              : False
+DEBUG    PaddleFormers:trainer.py:5337 overwrite_output_dir          : False
+DEBUG    PaddleFormers:trainer.py:5337 p2p_cache_shape               : True
+DEBUG    PaddleFormers:trainer.py:5337 pad_token_id                  : 0
+DEBUG    PaddleFormers:trainer.py:5337 partial_send_recv             : True
+DEBUG    PaddleFormers:trainer.py:5337 past_index                    : -1
+DEBUG    PaddleFormers:trainer.py:5337 pdc_download_ckpt             : False
+DEBUG    PaddleFormers:trainer.py:5337 pdc_download_timeout          : 300
+DEBUG    PaddleFormers:trainer.py:5337 per_device_eval_batch_size    : 8
+DEBUG    PaddleFormers:trainer.py:5337 per_device_train_batch_size   : 8
+DEBUG    PaddleFormers:trainer.py:5337 pipeline_model_parallel_size  : -1
+DEBUG    PaddleFormers:trainer.py:5337 pipeline_parallel_config      : 
+DEBUG    PaddleFormers:trainer.py:5337 pipeline_parallel_rank        : 0
+DEBUG    PaddleFormers:trainer.py:5337 power                         : 1.0
+DEBUG    PaddleFormers:trainer.py:5337 pp_delay_scale_loss           : True
+DEBUG    PaddleFormers:trainer.py:5337 pp_release_grads              : False
+DEBUG    PaddleFormers:trainer.py:5337 pp_sharding_comm_overlap      : False
+DEBUG    PaddleFormers:trainer.py:5337 pp_sync_moment                : False
+DEBUG    PaddleFormers:trainer.py:5337 pp_sync_param                 : False
+DEBUG    PaddleFormers:trainer.py:5337 pre_alloc_memory              : 0
+DEBUG    PaddleFormers:trainer.py:5337 prediction_loss_only          : False
+DEBUG    PaddleFormers:trainer.py:5337 prefetch_factor               : 2
+DEBUG    PaddleFormers:trainer.py:5337 process_index                 : 0
+DEBUG    PaddleFormers:trainer.py:5337 profile                       : False
+DEBUG    PaddleFormers:trainer.py:5337 profile_step_end              : 12
+DEBUG    PaddleFormers:trainer.py:5337 profile_step_start            : 10
+DEBUG    PaddleFormers:trainer.py:5337 recompute_granularity         : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_method              : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_modules             : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_mtp_granularity     : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_mtp_method          : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_mtp_modules         : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_num_layers          : None
+DEBUG    PaddleFormers:trainer.py:5337 release_grads                 : False
+DEBUG    PaddleFormers:trainer.py:5337 remove_unused_columns         : True
+DEBUG    PaddleFormers:trainer.py:5337 reorder_pipeline_priority     : False
+DEBUG    PaddleFormers:trainer.py:5337 replace_with_c_embedding      : False
+DEBUG    PaddleFormers:trainer.py:5337 replace_with_parallel_cross_entropy: False
+DEBUG    PaddleFormers:trainer.py:5337 replicate_saved_into_local    : False
+DEBUG    PaddleFormers:trainer.py:5337 report_to                     : []
+DEBUG    PaddleFormers:trainer.py:5337 resume_from_checkpoint        : None
+DEBUG    PaddleFormers:trainer.py:5337 resume_from_huggingface_ckpt  : None
+DEBUG    PaddleFormers:trainer.py:5337 run_name                      : /tmp/tmplfnbp1t9
+DEBUG    PaddleFormers:trainer.py:5337 save_checkpoint_format        : flex_checkpoint
+DEBUG    PaddleFormers:trainer.py:5337 save_hf_memory_growth_threshold: 8
+DEBUG    PaddleFormers:trainer.py:5337 save_hf_steps                 : -1
+DEBUG    PaddleFormers:trainer.py:5337 save_hf_total_limit           : None
+DEBUG    PaddleFormers:trainer.py:5337 save_last_step                : False
+DEBUG    PaddleFormers:trainer.py:5337 save_on_each_node             : False
+DEBUG    PaddleFormers:trainer.py:5337 save_rng_states               : True
+DEBUG    PaddleFormers:trainer.py:5337 save_sharded_model            : False
+DEBUG    PaddleFormers:trainer.py:5337 save_sharding_stage1_model_include_freeze_params: False
+DEBUG    PaddleFormers:trainer.py:5337 save_steps                    : 500
+DEBUG    PaddleFormers:trainer.py:5337 save_strategy                 : IntervalStrategy.STEPS
+DEBUG    PaddleFormers:trainer.py:5337 save_to_hf                    : True
+DEBUG    PaddleFormers:trainer.py:5337 save_tokenizer                : True
+DEBUG    PaddleFormers:trainer.py:5337 save_total_limit              : None
+DEBUG    PaddleFormers:trainer.py:5337 scale_loss                    : 32768
+DEBUG    PaddleFormers:trainer.py:5337 sd_release_grads              : False
+DEBUG    PaddleFormers:trainer.py:5337 sd_sharding_comm_overlap      : False
+DEBUG    PaddleFormers:trainer.py:5337 sd_shardingv1_comm_overlap    : False
+DEBUG    PaddleFormers:trainer.py:5337 seed                          : 42
+DEBUG    PaddleFormers:trainer.py:5337 send_recv_overlap             : False
+DEBUG    PaddleFormers:trainer.py:5337 sep_parallel_size             : -1
+DEBUG    PaddleFormers:trainer.py:5337 sequence_parallel             : False
+DEBUG    PaddleFormers:trainer.py:5337 sequence_parallel_config      : 
+DEBUG    PaddleFormers:trainer.py:5337 sharded_model_from_ema        : False
+DEBUG    PaddleFormers:trainer.py:5337 sharding                      : []
+DEBUG    PaddleFormers:trainer.py:5337 sharding_comm_buffer_size_MB  : -1
+DEBUG    PaddleFormers:trainer.py:5337 sharding_comm_group_call_opt  : False
+DEBUG    PaddleFormers:trainer.py:5337 sharding_degree               : -1
+DEBUG    PaddleFormers:trainer.py:5337 sharding_offload_opt_buffersize_GB: -1
+DEBUG    PaddleFormers:trainer.py:5337 sharding_parallel_config      : 
+DEBUG    PaddleFormers:trainer.py:5337 sharding_parallel_mesh_dimension: dp
+DEBUG    PaddleFormers:trainer.py:5337 sharding_parallel_rank        : 0
+DEBUG    PaddleFormers:trainer.py:5337 sharding_parallel_size        : -1
+DEBUG    PaddleFormers:trainer.py:5337 should_load_dataset           : True
+DEBUG    PaddleFormers:trainer.py:5337 should_load_sharding_stage1_model: False
+DEBUG    PaddleFormers:trainer.py:5337 should_log                    : True
+DEBUG    PaddleFormers:trainer.py:5337 should_save                   : True
+DEBUG    PaddleFormers:trainer.py:5337 should_save_model_state       : True
+DEBUG    PaddleFormers:trainer.py:5337 should_save_model_with_tensor_fusion: False
+DEBUG    PaddleFormers:trainer.py:5337 should_save_sharding_stage1_model: False
+DEBUG    PaddleFormers:trainer.py:5337 skip_data_intervals           : None
+DEBUG    PaddleFormers:trainer.py:5337 skip_memory_metrics           : True
+DEBUG    PaddleFormers:trainer.py:5337 skip_profile_timer            : True
+DEBUG    PaddleFormers:trainer.py:5337 sp_allreduce_avg_in_gradinent_scale: False
+DEBUG    PaddleFormers:trainer.py:5337 sp_async_reduce_scatter       : False
+DEBUG    PaddleFormers:trainer.py:5337 split_backward                : False
+DEBUG    PaddleFormers:trainer.py:5337 split_inputs_sequence_dim     : True
+DEBUG    PaddleFormers:trainer.py:5337 split_norm_comm               : False
+DEBUG    PaddleFormers:trainer.py:5337 split_param                   : True
+DEBUG    PaddleFormers:trainer.py:5337 stage1_allgather_overlap      : False
+DEBUG    PaddleFormers:trainer.py:5337 stage1_broadcast_overlap      : False
+DEBUG    PaddleFormers:trainer.py:5337 stage1_overlap                : False
+DEBUG    PaddleFormers:trainer.py:5337 stage1_reduce_avg             : True
+DEBUG    PaddleFormers:trainer.py:5337 stage1_tensor_fusion          : False
+DEBUG    PaddleFormers:trainer.py:5337 stage2_overlap                : False
+DEBUG    PaddleFormers:trainer.py:5337 sync_grad                     : False
+DEBUG    PaddleFormers:trainer.py:5337 tensor_fusion                 : False
+DEBUG    PaddleFormers:trainer.py:5337 tensor_model_parallel_size    : -1
+DEBUG    PaddleFormers:trainer.py:5337 tensor_parallel_config        : 
+DEBUG    PaddleFormers:trainer.py:5337 tensor_parallel_rank          : 0
+DEBUG    PaddleFormers:trainer.py:5337 tensorwise_offload_optimizer  : False
+DEBUG    PaddleFormers:trainer.py:5337 timer                         : False
+DEBUG    PaddleFormers:trainer.py:5337 to_static                     : False
+DEBUG    PaddleFormers:trainer.py:5337 tp_async_allreduce            : False
+DEBUG    PaddleFormers:trainer.py:5337 tp_sync_moment                : False
+DEBUG    PaddleFormers:trainer.py:5337 tp_sync_param                 : False
+DEBUG    PaddleFormers:trainer.py:5337 train_batch_size              : 8
+DEBUG    PaddleFormers:trainer.py:5337 train_mtp_only                : False
+DEBUG    PaddleFormers:trainer.py:5337 unified_checkpoint            : False
+DEBUG    PaddleFormers:trainer.py:5337 unified_checkpoint_config     : 
+DEBUG    PaddleFormers:trainer.py:5337 use_async_save                : False
+DEBUG    PaddleFormers:trainer.py:5337 use_cache                     : False
+DEBUG    PaddleFormers:trainer.py:5337 use_dualpipev                 : False
+DEBUG    PaddleFormers:trainer.py:5337 use_expert_parallel           : False
+DEBUG    PaddleFormers:trainer.py:5337 use_hybrid_parallel           : False
+DEBUG    PaddleFormers:trainer.py:5337 use_intermediate_api          : False
+DEBUG    PaddleFormers:trainer.py:5337 use_lowprecision_moment       : False
+DEBUG    PaddleFormers:trainer.py:5337 using_sonic_moe               : False
+DEBUG    PaddleFormers:trainer.py:5337 variable_seq_lengths          : False
+DEBUG    PaddleFormers:trainer.py:5337 wandb_api_key                 : None
+DEBUG    PaddleFormers:trainer.py:5337 wandb_http_proxy              : None
+DEBUG    PaddleFormers:trainer.py:5337 warmup_ratio                  : 0.0
+DEBUG    PaddleFormers:trainer.py:5337 warmup_steps                  : 0
+DEBUG    PaddleFormers:trainer.py:5337 weight_decay                  : 0.0
+DEBUG    PaddleFormers:trainer.py:5337 weight_name_suffix            : None
+DEBUG    PaddleFormers:trainer.py:5337 world_size                    : 1
+DEBUG    PaddleFormers:trainer.py:5337 zcc_ema_interval              : 1
+DEBUG    PaddleFormers:trainer.py:5337 zcc_ema_loss_threshold        : None
+DEBUG    PaddleFormers:trainer.py:5337 zcc_pipeline_hooks_capacity_usage: 0.6
+DEBUG    PaddleFormers:trainer.py:5337 zcc_save_ema_coef             : None
+DEBUG    PaddleFormers:trainer.py:5337 zcc_workers_num               : 3
+DEBUG    PaddleFormers:trainer.py:5339 
+INFO     PaddleFormers:training_args.py:1767 fa_version = 2 set FLAGS_flash_attn_version to 2
+INFO     PaddleFormers:training_args.py:2745 Auto set hybrid_parallel_expert_grad_scale = 1.0
+INFO     PaddleFormers:trainer_utils.py:327 The global seed is set to 42, local seed is set to 43 and random seed is set to 42.
+INFO     PaddleFormers:trainer.py:623 Using half precision
+DEBUG    PaddleFormers:trainer.py:5319 ============================================================
+DEBUG    PaddleFormers:trainer.py:5325     Training Configuration Arguments    
+DEBUG    PaddleFormers:trainer.py:5326 paddle commit id              : ea660cfb3c080a91e73995b94802505df909ed62
+DEBUG    PaddleFormers:trainer.py:5327 paddleformers commit id       : da1ffabcabefb6c4bdb60d521092e5260e04bb27
+DEBUG    PaddleFormers:trainer.py:5331 paddlefleet commit id         : f75afe5cf43434ae339d03115b233aa0e82fb3a6
+DEBUG    PaddleFormers:trainer.py:5337 _no_sync_in_gradient_accumulation: True
+DEBUG    PaddleFormers:trainer.py:5337 adam_beta1                    : 0.9
+DEBUG    PaddleFormers:trainer.py:5337 adam_beta2                    : 0.999
+DEBUG    PaddleFormers:trainer.py:5337 adam_epsilon                  : 1e-08
+DEBUG    PaddleFormers:trainer.py:5337 amp_custom_black_list         : ['reduce_sum', 'softmax_with_cross_entropy', 'c_softmax_with_cross_entropy', 'elementwise_div', 'sin', 'cos']
+DEBUG    PaddleFormers:trainer.py:5337 amp_custom_white_list         : ['lookup_table', 'lookup_table_v2', 'flash_attn', 'matmul', 'matmul_v2', 'fused_gemm_epilogue']
+DEBUG    PaddleFormers:trainer.py:5337 amp_master_grad               : True
+DEBUG    PaddleFormers:trainer.py:5337 aoa_config                    : None
+DEBUG    PaddleFormers:trainer.py:5337 auto_parallel_resume_form_hybrid_parallel: False
+DEBUG    PaddleFormers:trainer.py:5337 auto_parallel_sync_shared_params: False
+DEBUG    PaddleFormers:trainer.py:5337 batch_p2p_comm                : True
+DEBUG    PaddleFormers:trainer.py:5337 best_unbalanced_scheduler     : False
+DEBUG    PaddleFormers:trainer.py:5337 bf16                          : True
+DEBUG    PaddleFormers:trainer.py:5337 bf16_full_eval                : False
+DEBUG    PaddleFormers:trainer.py:5337 ckpt_quant_stage              : O0
+DEBUG    PaddleFormers:trainer.py:5337 clear_every_step_cache        : False
+DEBUG    PaddleFormers:trainer.py:5337 context_parallel_rank         : 0
+DEBUG    PaddleFormers:trainer.py:5337 context_parallel_size         : -1
+DEBUG    PaddleFormers:trainer.py:5337 convert_from_hf               : True
+DEBUG    PaddleFormers:trainer.py:5337 count_trained_tokens          : False
+DEBUG    PaddleFormers:trainer.py:5337 cp_comm_type                  : None
+DEBUG    PaddleFormers:trainer.py:5337 cp_sharding_degree            : 1
+DEBUG    PaddleFormers:trainer.py:5337 cp_sharding_rank              : 0
+DEBUG    PaddleFormers:trainer.py:5337 current_device                : gpu:0
+DEBUG    PaddleFormers:trainer.py:5337 data_parallel_config          : 
+DEBUG    PaddleFormers:trainer.py:5337 data_parallel_rank            : 0
+DEBUG    PaddleFormers:trainer.py:5337 data_parallel_size            : 1
+DEBUG    PaddleFormers:trainer.py:5337 dataloader_drop_last          : False
+DEBUG    PaddleFormers:trainer.py:5337 dataloader_num_workers        : 0
+DEBUG    PaddleFormers:trainer.py:5337 dataloader_shuffle            : True
+DEBUG    PaddleFormers:trainer.py:5337 dataset_rank                  : 0
+DEBUG    PaddleFormers:trainer.py:5337 dataset_world_size            : 1
+DEBUG    PaddleFormers:trainer.py:5337 ddp_find_unused_parameters    : None
+DEBUG    PaddleFormers:trainer.py:5337 deterministic_mode            : False
+DEBUG    PaddleFormers:trainer.py:5337 device                        : gpu
+DEBUG    PaddleFormers:trainer.py:5337 disable_tqdm                  : False
+DEBUG    PaddleFormers:trainer.py:5337 distributed_dataloader        : False
+DEBUG    PaddleFormers:trainer.py:5337 do_eval                       : False
+DEBUG    PaddleFormers:trainer.py:5337 do_export                     : False
+DEBUG    PaddleFormers:trainer.py:5337 do_predict                    : False
+DEBUG    PaddleFormers:trainer.py:5337 do_train                      : False
+DEBUG    PaddleFormers:trainer.py:5337 dp_allreduce_avg_in_gradinent_scale: False
+DEBUG    PaddleFormers:trainer.py:5337 dp_comm_overlap               : False
+DEBUG    PaddleFormers:trainer.py:5337 dsa_indexer_loss_coeff        : 0.01
+DEBUG    PaddleFormers:trainer.py:5337 enable_auto_parallel          : False
+DEBUG    PaddleFormers:trainer.py:5337 enable_zero_cost_checkpoint   : False
+DEBUG    PaddleFormers:trainer.py:5337 eval_accumulation_steps       : None
+DEBUG    PaddleFormers:trainer.py:5337 eval_batch_size               : 8
+DEBUG    PaddleFormers:trainer.py:5337 eval_steps                    : None
+DEBUG    PaddleFormers:trainer.py:5337 evaluation_strategy           : IntervalStrategy.NO
+DEBUG    PaddleFormers:trainer.py:5337 expert_model_parallel_size    : -1
+DEBUG    PaddleFormers:trainer.py:5337 expert_parallel_rank          : 0
+DEBUG    PaddleFormers:trainer.py:5337 expert_tensor_model_parallel_size: -1
+DEBUG    PaddleFormers:trainer.py:5337 fa_version                    : 2
+DEBUG    PaddleFormers:trainer.py:5337 flash_device_save_steps       : 0
+DEBUG    PaddleFormers:trainer.py:5337 flatten_param_grads           : False
+DEBUG    PaddleFormers:trainer.py:5337 flex_ckpt_comm_method         : None
+DEBUG    PaddleFormers:trainer.py:5337 force_reshard_pp              : False
+DEBUG    PaddleFormers:trainer.py:5337 forward_backward_overlap_scheduler: False
+DEBUG    PaddleFormers:trainer.py:5337 fp16                          : False
+DEBUG    PaddleFormers:trainer.py:5337 fp16_full_eval                : False
+DEBUG    PaddleFormers:trainer.py:5337 fp16_opt_level                : O1
+DEBUG    PaddleFormers:trainer.py:5337 freeze_training               : False
+DEBUG    PaddleFormers:trainer.py:5337 fuse_optimizer_states         : False
+DEBUG    PaddleFormers:trainer.py:5337 fuse_sequence_parallel_allreduce: False
+DEBUG    PaddleFormers:trainer.py:5337 gradient_accumulation_steps   : 1
+DEBUG    PaddleFormers:trainer.py:5337 gradient_sync_after_accumulate: False
+DEBUG    PaddleFormers:trainer.py:5337 greater_is_better             : None
+DEBUG    PaddleFormers:trainer.py:5337 hybrid_parallel_expert_grad_scale: 1.0
+DEBUG    PaddleFormers:trainer.py:5337 hybrid_parallel_topo_order    : sharding_first
+DEBUG    PaddleFormers:trainer.py:5337 ignore_data_skip              : False
+DEBUG    PaddleFormers:trainer.py:5337 ignore_load_lr_and_optim      : False
+DEBUG    PaddleFormers:trainer.py:5337 ignore_save_lr_and_optim      : False
+DEBUG    PaddleFormers:trainer.py:5337 label_names                   : None
+DEBUG    PaddleFormers:trainer.py:5337 lazy_data_processing          : True
+DEBUG    PaddleFormers:trainer.py:5337 learning_rate                 : 5e-05
+DEBUG    PaddleFormers:trainer.py:5337 load_best_model_at_end        : False
+DEBUG    PaddleFormers:trainer.py:5337 load_checkpoint_format        : flex_checkpoint
+DEBUG    PaddleFormers:trainer.py:5337 load_from_hf                  : False
+DEBUG    PaddleFormers:trainer.py:5337 load_sharded_model            : False
+DEBUG    PaddleFormers:trainer.py:5337 load_sharded_model_remap_parameter_name: False
+DEBUG    PaddleFormers:trainer.py:5337 load_via_cpu                  : True
+DEBUG    PaddleFormers:trainer.py:5337 local_process_index           : 0
+DEBUG    PaddleFormers:trainer.py:5337 local_rank                    : -1
+DEBUG    PaddleFormers:trainer.py:5337 log_level                     : -1
+DEBUG    PaddleFormers:trainer.py:5337 log_level_replica             : -1
+DEBUG    PaddleFormers:trainer.py:5337 log_on_each_node              : True
+DEBUG    PaddleFormers:trainer.py:5337 logging_dir                   : /tmp/tmplfnbp1t9/runs/May22_17-01-49_yq01-inf-hic-k8s-a100-aa24-0583.yq01.baidu.com
+DEBUG    PaddleFormers:trainer.py:5337 logging_first_step            : False
+DEBUG    PaddleFormers:trainer.py:5337 logging_steps                 : 500
+DEBUG    PaddleFormers:trainer.py:5337 logging_strategy              : IntervalStrategy.STEPS
+DEBUG    PaddleFormers:trainer.py:5337 logical_process_index         : 0
+DEBUG    PaddleFormers:trainer.py:5337 lr_end                        : 1e-07
+DEBUG    PaddleFormers:trainer.py:5337 lr_scheduler_type             : SchedulerType.LINEAR
+DEBUG    PaddleFormers:trainer.py:5337 max_evaluate_steps            : -1
+DEBUG    PaddleFormers:trainer.py:5337 max_grad_norm                 : 1.0
+DEBUG    PaddleFormers:trainer.py:5337 max_steps                     : -1
+DEBUG    PaddleFormers:trainer.py:5337 metric_for_best_model         : None
+DEBUG    PaddleFormers:trainer.py:5337 metrics_output_path           : None
+DEBUG    PaddleFormers:trainer.py:5337 min_lr                        : 0.0
+DEBUG    PaddleFormers:trainer.py:5337 minimum_eval_times            : None
+DEBUG    PaddleFormers:trainer.py:5337 moe_router_bias_update_rate   : 0.0
+DEBUG    PaddleFormers:trainer.py:5337 moe_sharding_parallel_rank    : 0
+DEBUG    PaddleFormers:trainer.py:5337 mp_async_allreduce            : False
+DEBUG    PaddleFormers:trainer.py:5337 mp_fused_linear_param_grad_add: False
+DEBUG    PaddleFormers:trainer.py:5337 mp_skip_c_identity            : False
+DEBUG    PaddleFormers:trainer.py:5337 mtp_distillation_loss         : False
+DEBUG    PaddleFormers:trainer.py:5337 mtp_num_layers                : 0
+DEBUG    PaddleFormers:trainer.py:5337 muon_exclude_patterns         : ['embed', 'bias', 'lm_head', 'mlp.gate']
+DEBUG    PaddleFormers:trainer.py:5337 muon_extra_scale_factor       : 0.2
+DEBUG    PaddleFormers:trainer.py:5337 muon_ffn_split                : True
+DEBUG    PaddleFormers:trainer.py:5337 muon_momentum                 : 0.95
+DEBUG    PaddleFormers:trainer.py:5337 muon_ns_coeff_type            : quintic
+DEBUG    PaddleFormers:trainer.py:5337 muon_ns_coeffs                : None
+DEBUG    PaddleFormers:trainer.py:5337 muon_ns_steps                 : 5
+DEBUG    PaddleFormers:trainer.py:5337 muon_qkv_update_mode          : split_head
+DEBUG    PaddleFormers:trainer.py:5337 muon_version                  : 3
+DEBUG    PaddleFormers:trainer.py:5337 nccl_comm_group_config        : None
+DEBUG    PaddleFormers:trainer.py:5337 no_cuda                       : False
+DEBUG    PaddleFormers:trainer.py:5337 non_batch_p2p_comm            : False
+DEBUG    PaddleFormers:trainer.py:5337 num_cycles                    : 0.5
+DEBUG    PaddleFormers:trainer.py:5337 num_nextn_predict_layers      : 0
+DEBUG    PaddleFormers:trainer.py:5337 num_train_epochs              : 1.0
+DEBUG    PaddleFormers:trainer.py:5337 offload_fp8_expert_master_weight: True
+DEBUG    PaddleFormers:trainer.py:5337 offload_queue                 : False
+DEBUG    PaddleFormers:trainer.py:5337 online_merge_ema              : True
+DEBUG    PaddleFormers:trainer.py:5337 optim                         : OptimizerNames.ADAMW
+DEBUG    PaddleFormers:trainer.py:5337 optim_shard_num               : 1
+DEBUG    PaddleFormers:trainer.py:5337 optimizer_name_suffix         : None
+DEBUG    PaddleFormers:trainer.py:5337 ordered_save_group_size       : 0
+DEBUG    PaddleFormers:trainer.py:5337 output_dir                    : /tmp/tmplfnbp1t9
+DEBUG    PaddleFormers:trainer.py:5337 output_signal_dir             : /tmp/tmplfnbp1t9
+DEBUG    PaddleFormers:trainer.py:5337 overlap                       : False
+DEBUG    PaddleFormers:trainer.py:5337 overlap_p2p_comm              : False
+DEBUG    PaddleFormers:trainer.py:5337 overwrite_output_dir          : False
+DEBUG    PaddleFormers:trainer.py:5337 p2p_cache_shape               : True
+DEBUG    PaddleFormers:trainer.py:5337 pad_token_id                  : 0
+DEBUG    PaddleFormers:trainer.py:5337 partial_send_recv             : True
+DEBUG    PaddleFormers:trainer.py:5337 past_index                    : -1
+DEBUG    PaddleFormers:trainer.py:5337 pdc_download_ckpt             : False
+DEBUG    PaddleFormers:trainer.py:5337 pdc_download_timeout          : 300
+DEBUG    PaddleFormers:trainer.py:5337 per_device_eval_batch_size    : 8
+DEBUG    PaddleFormers:trainer.py:5337 per_device_train_batch_size   : 8
+DEBUG    PaddleFormers:trainer.py:5337 pipeline_model_parallel_size  : -1
+DEBUG    PaddleFormers:trainer.py:5337 pipeline_parallel_config      : 
+DEBUG    PaddleFormers:trainer.py:5337 pipeline_parallel_rank        : 0
+DEBUG    PaddleFormers:trainer.py:5337 power                         : 1.0
+DEBUG    PaddleFormers:trainer.py:5337 pp_delay_scale_loss           : True
+DEBUG    PaddleFormers:trainer.py:5337 pp_release_grads              : False
+DEBUG    PaddleFormers:trainer.py:5337 pp_sharding_comm_overlap      : False
+DEBUG    PaddleFormers:trainer.py:5337 pp_sync_moment                : False
+DEBUG    PaddleFormers:trainer.py:5337 pp_sync_param                 : False
+DEBUG    PaddleFormers:trainer.py:5337 pre_alloc_memory              : 0
+DEBUG    PaddleFormers:trainer.py:5337 prediction_loss_only          : False
+DEBUG    PaddleFormers:trainer.py:5337 prefetch_factor               : 2
+DEBUG    PaddleFormers:trainer.py:5337 process_index                 : 0
+DEBUG    PaddleFormers:trainer.py:5337 profile                       : False
+DEBUG    PaddleFormers:trainer.py:5337 profile_step_end              : 12
+DEBUG    PaddleFormers:trainer.py:5337 profile_step_start            : 10
+DEBUG    PaddleFormers:trainer.py:5337 recompute_granularity         : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_method              : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_modules             : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_mtp_granularity     : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_mtp_method          : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_mtp_modules         : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_num_layers          : None
+DEBUG    PaddleFormers:trainer.py:5337 release_grads                 : False
+DEBUG    PaddleFormers:trainer.py:5337 remove_unused_columns         : True
+DEBUG    PaddleFormers:trainer.py:5337 reorder_pipeline_priority     : False
+DEBUG    PaddleFormers:trainer.py:5337 replace_with_c_embedding      : False
+DEBUG    PaddleFormers:trainer.py:5337 replace_with_parallel_cross_entropy: False
+DEBUG    PaddleFormers:trainer.py:5337 replicate_saved_into_local    : False
+DEBUG    PaddleFormers:trainer.py:5337 report_to                     : []
+DEBUG    PaddleFormers:trainer.py:5337 resume_from_checkpoint        : None
+DEBUG    PaddleFormers:trainer.py:5337 resume_from_huggingface_ckpt  : None
+DEBUG    PaddleFormers:trainer.py:5337 run_name                      : /tmp/tmplfnbp1t9
+DEBUG    PaddleFormers:trainer.py:5337 save_checkpoint_format        : flex_checkpoint
+DEBUG    PaddleFormers:trainer.py:5337 save_hf_memory_growth_threshold: 8
+DEBUG    PaddleFormers:trainer.py:5337 save_hf_steps                 : -1
+DEBUG    PaddleFormers:trainer.py:5337 save_hf_total_limit           : None
+DEBUG    PaddleFormers:trainer.py:5337 save_last_step                : False
+DEBUG    PaddleFormers:trainer.py:5337 save_on_each_node             : False
+DEBUG    PaddleFormers:trainer.py:5337 save_rng_states               : True
+DEBUG    PaddleFormers:trainer.py:5337 save_sharded_model            : False
+DEBUG    PaddleFormers:trainer.py:5337 save_sharding_stage1_model_include_freeze_params: False
+DEBUG    PaddleFormers:trainer.py:5337 save_steps                    : 500
+DEBUG    PaddleFormers:trainer.py:5337 save_strategy                 : IntervalStrategy.STEPS
+DEBUG    PaddleFormers:trainer.py:5337 save_to_hf                    : True
+DEBUG    PaddleFormers:trainer.py:5337 save_tokenizer                : True
+DEBUG    PaddleFormers:trainer.py:5337 save_total_limit              : None
+DEBUG    PaddleFormers:trainer.py:5337 scale_loss                    : 32768
+DEBUG    PaddleFormers:trainer.py:5337 sd_release_grads              : False
+DEBUG    PaddleFormers:trainer.py:5337 sd_sharding_comm_overlap      : False
+DEBUG    PaddleFormers:trainer.py:5337 sd_shardingv1_comm_overlap    : False
+DEBUG    PaddleFormers:trainer.py:5337 seed                          : 42
+DEBUG    PaddleFormers:trainer.py:5337 send_recv_overlap             : False
+DEBUG    PaddleFormers:trainer.py:5337 sep_parallel_size             : -1
+DEBUG    PaddleFormers:trainer.py:5337 sequence_parallel             : False
+DEBUG    PaddleFormers:trainer.py:5337 sequence_parallel_config      : 
+DEBUG    PaddleFormers:trainer.py:5337 sharded_model_from_ema        : False
+DEBUG    PaddleFormers:trainer.py:5337 sharding                      : []
+DEBUG    PaddleFormers:trainer.py:5337 sharding_comm_buffer_size_MB  : -1
+DEBUG    PaddleFormers:trainer.py:5337 sharding_comm_group_call_opt  : False
+DEBUG    PaddleFormers:trainer.py:5337 sharding_degree               : -1
+DEBUG    PaddleFormers:trainer.py:5337 sharding_offload_opt_buffersize_GB: -1
+DEBUG    PaddleFormers:trainer.py:5337 sharding_parallel_config      : 
+DEBUG    PaddleFormers:trainer.py:5337 sharding_parallel_mesh_dimension: dp
+DEBUG    PaddleFormers:trainer.py:5337 sharding_parallel_rank        : 0
+DEBUG    PaddleFormers:trainer.py:5337 sharding_parallel_size        : -1
+DEBUG    PaddleFormers:trainer.py:5337 should_load_dataset           : True
+DEBUG    PaddleFormers:trainer.py:5337 should_load_sharding_stage1_model: False
+DEBUG    PaddleFormers:trainer.py:5337 should_log                    : True
+DEBUG    PaddleFormers:trainer.py:5337 should_save                   : True
+DEBUG    PaddleFormers:trainer.py:5337 should_save_model_state       : True
+DEBUG    PaddleFormers:trainer.py:5337 should_save_model_with_tensor_fusion: False
+DEBUG    PaddleFormers:trainer.py:5337 should_save_sharding_stage1_model: False
+DEBUG    PaddleFormers:trainer.py:5337 skip_data_intervals           : None
+DEBUG    PaddleFormers:trainer.py:5337 skip_memory_metrics           : True
+DEBUG    PaddleFormers:trainer.py:5337 skip_profile_timer            : True
+DEBUG    PaddleFormers:trainer.py:5337 sp_allreduce_avg_in_gradinent_scale: False
+DEBUG    PaddleFormers:trainer.py:5337 sp_async_reduce_scatter       : False
+DEBUG    PaddleFormers:trainer.py:5337 split_backward                : False
+DEBUG    PaddleFormers:trainer.py:5337 split_inputs_sequence_dim     : True
+DEBUG    PaddleFormers:trainer.py:5337 split_norm_comm               : False
+DEBUG    PaddleFormers:trainer.py:5337 split_param                   : True
+DEBUG    PaddleFormers:trainer.py:5337 stage1_allgather_overlap      : False
+DEBUG    PaddleFormers:trainer.py:5337 stage1_broadcast_overlap      : False
+DEBUG    PaddleFormers:trainer.py:5337 stage1_overlap                : False
+DEBUG    PaddleFormers:trainer.py:5337 stage1_reduce_avg             : True
+DEBUG    PaddleFormers:trainer.py:5337 stage1_tensor_fusion          : False
+DEBUG    PaddleFormers:trainer.py:5337 stage2_overlap                : False
+DEBUG    PaddleFormers:trainer.py:5337 sync_grad                     : False
+DEBUG    PaddleFormers:trainer.py:5337 tensor_fusion                 : False
+DEBUG    PaddleFormers:trainer.py:5337 tensor_model_parallel_size    : -1
+DEBUG    PaddleFormers:trainer.py:5337 tensor_parallel_config        : 
+DEBUG    PaddleFormers:trainer.py:5337 tensor_parallel_rank          : 0
+DEBUG    PaddleFormers:trainer.py:5337 tensorwise_offload_optimizer  : False
+DEBUG    PaddleFormers:trainer.py:5337 timer                         : False
+DEBUG    PaddleFormers:trainer.py:5337 to_static                     : False
+DEBUG    PaddleFormers:trainer.py:5337 tp_async_allreduce            : False
+DEBUG    PaddleFormers:trainer.py:5337 tp_sync_moment                : False
+DEBUG    PaddleFormers:trainer.py:5337 tp_sync_param                 : False
+DEBUG    PaddleFormers:trainer.py:5337 train_batch_size              : 8
+DEBUG    PaddleFormers:trainer.py:5337 train_mtp_only                : False
+DEBUG    PaddleFormers:trainer.py:5337 unified_checkpoint            : False
+DEBUG    PaddleFormers:trainer.py:5337 unified_checkpoint_config     : 
+DEBUG    PaddleFormers:trainer.py:5337 use_async_save                : False
+DEBUG    PaddleFormers:trainer.py:5337 use_cache                     : False
+DEBUG    PaddleFormers:trainer.py:5337 use_dualpipev                 : False
+DEBUG    PaddleFormers:trainer.py:5337 use_expert_parallel           : False
+DEBUG    PaddleFormers:trainer.py:5337 use_hybrid_parallel           : False
+DEBUG    PaddleFormers:trainer.py:5337 use_intermediate_api          : False
+DEBUG    PaddleFormers:trainer.py:5337 use_lowprecision_moment       : False
+DEBUG    PaddleFormers:trainer.py:5337 using_sonic_moe               : False
+DEBUG    PaddleFormers:trainer.py:5337 variable_seq_lengths          : False
+DEBUG    PaddleFormers:trainer.py:5337 wandb_api_key                 : None
+DEBUG    PaddleFormers:trainer.py:5337 wandb_http_proxy              : None
+DEBUG    PaddleFormers:trainer.py:5337 warmup_ratio                  : 0.0
+DEBUG    PaddleFormers:trainer.py:5337 warmup_steps                  : 0
+DEBUG    PaddleFormers:trainer.py:5337 weight_decay                  : 0.0
+DEBUG    PaddleFormers:trainer.py:5337 weight_name_suffix            : None
+DEBUG    PaddleFormers:trainer.py:5337 world_size                    : 1
+DEBUG    PaddleFormers:trainer.py:5337 zcc_ema_interval              : 1
+DEBUG    PaddleFormers:trainer.py:5337 zcc_ema_loss_threshold        : None
+DEBUG    PaddleFormers:trainer.py:5337 zcc_pipeline_hooks_capacity_usage: 0.6
+DEBUG    PaddleFormers:trainer.py:5337 zcc_save_ema_coef             : None
+DEBUG    PaddleFormers:trainer.py:5337 zcc_workers_num               : 3
+DEBUG    PaddleFormers:trainer.py:5339 
+INFO     PaddleFormers:training_args.py:1767 fa_version = 2 set FLAGS_flash_attn_version to 2
+INFO     PaddleFormers:training_args.py:2745 Auto set hybrid_parallel_expert_grad_scale = 1.0
+INFO     PaddleFormers:trainer_utils.py:327 The global seed is set to 42, local seed is set to 43 and random seed is set to 42.
+INFO     PaddleFormers:trainer.py:623 Using half precision
+DEBUG    PaddleFormers:trainer.py:5319 ============================================================
+DEBUG    PaddleFormers:trainer.py:5325     Training Configuration Arguments    
+DEBUG    PaddleFormers:trainer.py:5326 paddle commit id              : ea660cfb3c080a91e73995b94802505df909ed62
+DEBUG    PaddleFormers:trainer.py:5327 paddleformers commit id       : da1ffabcabefb6c4bdb60d521092e5260e04bb27
+DEBUG    PaddleFormers:trainer.py:5331 paddlefleet commit id         : f75afe5cf43434ae339d03115b233aa0e82fb3a6
+DEBUG    PaddleFormers:trainer.py:5337 _no_sync_in_gradient_accumulation: True
+DEBUG    PaddleFormers:trainer.py:5337 adam_beta1                    : 0.9
+DEBUG    PaddleFormers:trainer.py:5337 adam_beta2                    : 0.999
+DEBUG    PaddleFormers:trainer.py:5337 adam_epsilon                  : 1e-08
+DEBUG    PaddleFormers:trainer.py:5337 amp_custom_black_list         : ['reduce_sum', 'softmax_with_cross_entropy', 'c_softmax_with_cross_entropy', 'elementwise_div', 'sin', 'cos']
+DEBUG    PaddleFormers:trainer.py:5337 amp_custom_white_list         : ['lookup_table', 'lookup_table_v2', 'flash_attn', 'matmul', 'matmul_v2', 'fused_gemm_epilogue']
+DEBUG    PaddleFormers:trainer.py:5337 amp_master_grad               : True
+DEBUG    PaddleFormers:trainer.py:5337 aoa_config                    : None
+DEBUG    PaddleFormers:trainer.py:5337 auto_parallel_resume_form_hybrid_parallel: False
+DEBUG    PaddleFormers:trainer.py:5337 auto_parallel_sync_shared_params: False
+DEBUG    PaddleFormers:trainer.py:5337 batch_p2p_comm                : True
+DEBUG    PaddleFormers:trainer.py:5337 best_unbalanced_scheduler     : False
+DEBUG    PaddleFormers:trainer.py:5337 bf16                          : True
+DEBUG    PaddleFormers:trainer.py:5337 bf16_full_eval                : False
+DEBUG    PaddleFormers:trainer.py:5337 ckpt_quant_stage              : O0
+DEBUG    PaddleFormers:trainer.py:5337 clear_every_step_cache        : False
+DEBUG    PaddleFormers:trainer.py:5337 context_parallel_rank         : 0
+DEBUG    PaddleFormers:trainer.py:5337 context_parallel_size         : -1
+DEBUG    PaddleFormers:trainer.py:5337 convert_from_hf               : True
+DEBUG    PaddleFormers:trainer.py:5337 count_trained_tokens          : False
+DEBUG    PaddleFormers:trainer.py:5337 cp_comm_type                  : None
+DEBUG    PaddleFormers:trainer.py:5337 cp_sharding_degree            : 1
+DEBUG    PaddleFormers:trainer.py:5337 cp_sharding_rank              : 0
+DEBUG    PaddleFormers:trainer.py:5337 current_device                : gpu:0
+DEBUG    PaddleFormers:trainer.py:5337 data_parallel_config          : 
+DEBUG    PaddleFormers:trainer.py:5337 data_parallel_rank            : 0
+DEBUG    PaddleFormers:trainer.py:5337 data_parallel_size            : 1
+DEBUG    PaddleFormers:trainer.py:5337 dataloader_drop_last          : False
+DEBUG    PaddleFormers:trainer.py:5337 dataloader_num_workers        : 0
+DEBUG    PaddleFormers:trainer.py:5337 dataloader_shuffle            : True
+DEBUG    PaddleFormers:trainer.py:5337 dataset_rank                  : 0
+DEBUG    PaddleFormers:trainer.py:5337 dataset_world_size            : 1
+DEBUG    PaddleFormers:trainer.py:5337 ddp_find_unused_parameters    : None
+DEBUG    PaddleFormers:trainer.py:5337 deterministic_mode            : False
+DEBUG    PaddleFormers:trainer.py:5337 device                        : gpu
+DEBUG    PaddleFormers:trainer.py:5337 disable_tqdm                  : True
+DEBUG    PaddleFormers:trainer.py:5337 distributed_dataloader        : False
+DEBUG    PaddleFormers:trainer.py:5337 do_eval                       : False
+DEBUG    PaddleFormers:trainer.py:5337 do_export                     : False
+DEBUG    PaddleFormers:trainer.py:5337 do_predict                    : False
+DEBUG    PaddleFormers:trainer.py:5337 do_train                      : False
+DEBUG    PaddleFormers:trainer.py:5337 dp_allreduce_avg_in_gradinent_scale: False
+DEBUG    PaddleFormers:trainer.py:5337 dp_comm_overlap               : False
+DEBUG    PaddleFormers:trainer.py:5337 dsa_indexer_loss_coeff        : 0.01
+DEBUG    PaddleFormers:trainer.py:5337 enable_auto_parallel          : False
+DEBUG    PaddleFormers:trainer.py:5337 enable_zero_cost_checkpoint   : False
+DEBUG    PaddleFormers:trainer.py:5337 eval_accumulation_steps       : None
+DEBUG    PaddleFormers:trainer.py:5337 eval_batch_size               : 8
+DEBUG    PaddleFormers:trainer.py:5337 eval_steps                    : None
+DEBUG    PaddleFormers:trainer.py:5337 evaluation_strategy           : IntervalStrategy.NO
+DEBUG    PaddleFormers:trainer.py:5337 expert_model_parallel_size    : -1
+DEBUG    PaddleFormers:trainer.py:5337 expert_parallel_rank          : 0
+DEBUG    PaddleFormers:trainer.py:5337 expert_tensor_model_parallel_size: -1
+DEBUG    PaddleFormers:trainer.py:5337 fa_version                    : 2
+DEBUG    PaddleFormers:trainer.py:5337 flash_device_save_steps       : 0
+DEBUG    PaddleFormers:trainer.py:5337 flatten_param_grads           : False
+DEBUG    PaddleFormers:trainer.py:5337 flex_ckpt_comm_method         : None
+DEBUG    PaddleFormers:trainer.py:5337 force_reshard_pp              : False
+DEBUG    PaddleFormers:trainer.py:5337 forward_backward_overlap_scheduler: False
+DEBUG    PaddleFormers:trainer.py:5337 fp16                          : False
+DEBUG    PaddleFormers:trainer.py:5337 fp16_full_eval                : False
+DEBUG    PaddleFormers:trainer.py:5337 fp16_opt_level                : O1
+DEBUG    PaddleFormers:trainer.py:5337 freeze_training               : False
+DEBUG    PaddleFormers:trainer.py:5337 fuse_optimizer_states         : False
+DEBUG    PaddleFormers:trainer.py:5337 fuse_sequence_parallel_allreduce: False
+DEBUG    PaddleFormers:trainer.py:5337 gradient_accumulation_steps   : 1
+DEBUG    PaddleFormers:trainer.py:5337 gradient_sync_after_accumulate: False
+DEBUG    PaddleFormers:trainer.py:5337 greater_is_better             : None
+DEBUG    PaddleFormers:trainer.py:5337 hybrid_parallel_expert_grad_scale: 1.0
+DEBUG    PaddleFormers:trainer.py:5337 hybrid_parallel_topo_order    : sharding_first
+DEBUG    PaddleFormers:trainer.py:5337 ignore_data_skip              : False
+DEBUG    PaddleFormers:trainer.py:5337 ignore_load_lr_and_optim      : False
+DEBUG    PaddleFormers:trainer.py:5337 ignore_save_lr_and_optim      : False
+DEBUG    PaddleFormers:trainer.py:5337 label_names                   : None
+DEBUG    PaddleFormers:trainer.py:5337 lazy_data_processing          : True
+DEBUG    PaddleFormers:trainer.py:5337 learning_rate                 : 5e-05
+DEBUG    PaddleFormers:trainer.py:5337 load_best_model_at_end        : False
+DEBUG    PaddleFormers:trainer.py:5337 load_checkpoint_format        : flex_checkpoint
+DEBUG    PaddleFormers:trainer.py:5337 load_from_hf                  : False
+DEBUG    PaddleFormers:trainer.py:5337 load_sharded_model            : False
+DEBUG    PaddleFormers:trainer.py:5337 load_sharded_model_remap_parameter_name: False
+DEBUG    PaddleFormers:trainer.py:5337 load_via_cpu                  : True
+DEBUG    PaddleFormers:trainer.py:5337 local_process_index           : 0
+DEBUG    PaddleFormers:trainer.py:5337 local_rank                    : -1
+DEBUG    PaddleFormers:trainer.py:5337 log_level                     : -1
+DEBUG    PaddleFormers:trainer.py:5337 log_level_replica             : -1
+DEBUG    PaddleFormers:trainer.py:5337 log_on_each_node              : True
+DEBUG    PaddleFormers:trainer.py:5337 logging_dir                   : /tmp/tmplfnbp1t9/runs/May22_17-01-49_yq01-inf-hic-k8s-a100-aa24-0583.yq01.baidu.com
+DEBUG    PaddleFormers:trainer.py:5337 logging_first_step            : False
+DEBUG    PaddleFormers:trainer.py:5337 logging_steps                 : 500
+DEBUG    PaddleFormers:trainer.py:5337 logging_strategy              : IntervalStrategy.STEPS
+DEBUG    PaddleFormers:trainer.py:5337 logical_process_index         : 0
+DEBUG    PaddleFormers:trainer.py:5337 lr_end                        : 1e-07
+DEBUG    PaddleFormers:trainer.py:5337 lr_scheduler_type             : SchedulerType.LINEAR
+DEBUG    PaddleFormers:trainer.py:5337 max_evaluate_steps            : -1
+DEBUG    PaddleFormers:trainer.py:5337 max_grad_norm                 : 1.0
+DEBUG    PaddleFormers:trainer.py:5337 max_steps                     : -1
+DEBUG    PaddleFormers:trainer.py:5337 metric_for_best_model         : None
+DEBUG    PaddleFormers:trainer.py:5337 metrics_output_path           : None
+DEBUG    PaddleFormers:trainer.py:5337 min_lr                        : 0.0
+DEBUG    PaddleFormers:trainer.py:5337 minimum_eval_times            : None
+DEBUG    PaddleFormers:trainer.py:5337 moe_router_bias_update_rate   : 0.0
+DEBUG    PaddleFormers:trainer.py:5337 moe_sharding_parallel_rank    : 0
+DEBUG    PaddleFormers:trainer.py:5337 mp_async_allreduce            : False
+DEBUG    PaddleFormers:trainer.py:5337 mp_fused_linear_param_grad_add: False
+DEBUG    PaddleFormers:trainer.py:5337 mp_skip_c_identity            : False
+DEBUG    PaddleFormers:trainer.py:5337 mtp_distillation_loss         : False
+DEBUG    PaddleFormers:trainer.py:5337 mtp_num_layers                : 0
+DEBUG    PaddleFormers:trainer.py:5337 muon_exclude_patterns         : ['embed', 'bias', 'lm_head', 'mlp.gate']
+DEBUG    PaddleFormers:trainer.py:5337 muon_extra_scale_factor       : 0.2
+DEBUG    PaddleFormers:trainer.py:5337 muon_ffn_split                : True
+DEBUG    PaddleFormers:trainer.py:5337 muon_momentum                 : 0.95
+DEBUG    PaddleFormers:trainer.py:5337 muon_ns_coeff_type            : quintic
+DEBUG    PaddleFormers:trainer.py:5337 muon_ns_coeffs                : None
+DEBUG    PaddleFormers:trainer.py:5337 muon_ns_steps                 : 5
+DEBUG    PaddleFormers:trainer.py:5337 muon_qkv_update_mode          : split_head
+DEBUG    PaddleFormers:trainer.py:5337 muon_version                  : 3
+DEBUG    PaddleFormers:trainer.py:5337 nccl_comm_group_config        : None
+DEBUG    PaddleFormers:trainer.py:5337 no_cuda                       : False
+DEBUG    PaddleFormers:trainer.py:5337 non_batch_p2p_comm            : False
+DEBUG    PaddleFormers:trainer.py:5337 num_cycles                    : 0.5
+DEBUG    PaddleFormers:trainer.py:5337 num_nextn_predict_layers      : 0
+DEBUG    PaddleFormers:trainer.py:5337 num_train_epochs              : 1.0
+DEBUG    PaddleFormers:trainer.py:5337 offload_fp8_expert_master_weight: True
+DEBUG    PaddleFormers:trainer.py:5337 offload_queue                 : False
+DEBUG    PaddleFormers:trainer.py:5337 online_merge_ema              : True
+DEBUG    PaddleFormers:trainer.py:5337 optim                         : OptimizerNames.ADAMW
+DEBUG    PaddleFormers:trainer.py:5337 optim_shard_num               : 1
+DEBUG    PaddleFormers:trainer.py:5337 optimizer_name_suffix         : None
+DEBUG    PaddleFormers:trainer.py:5337 ordered_save_group_size       : 0
+DEBUG    PaddleFormers:trainer.py:5337 output_dir                    : /tmp/tmplfnbp1t9
+DEBUG    PaddleFormers:trainer.py:5337 output_signal_dir             : /tmp/tmplfnbp1t9
+DEBUG    PaddleFormers:trainer.py:5337 overlap                       : False
+DEBUG    PaddleFormers:trainer.py:5337 overlap_p2p_comm              : False
+DEBUG    PaddleFormers:trainer.py:5337 overwrite_output_dir          : False
+DEBUG    PaddleFormers:trainer.py:5337 p2p_cache_shape               : True
+DEBUG    PaddleFormers:trainer.py:5337 pad_token_id                  : 0
+DEBUG    PaddleFormers:trainer.py:5337 partial_send_recv             : True
+DEBUG    PaddleFormers:trainer.py:5337 past_index                    : -1
+DEBUG    PaddleFormers:trainer.py:5337 pdc_download_ckpt             : False
+DEBUG    PaddleFormers:trainer.py:5337 pdc_download_timeout          : 300
+DEBUG    PaddleFormers:trainer.py:5337 per_device_eval_batch_size    : 8
+DEBUG    PaddleFormers:trainer.py:5337 per_device_train_batch_size   : 8
+DEBUG    PaddleFormers:trainer.py:5337 pipeline_model_parallel_size  : -1
+DEBUG    PaddleFormers:trainer.py:5337 pipeline_parallel_config      : 
+DEBUG    PaddleFormers:trainer.py:5337 pipeline_parallel_rank        : 0
+DEBUG    PaddleFormers:trainer.py:5337 power                         : 1.0
+DEBUG    PaddleFormers:trainer.py:5337 pp_delay_scale_loss           : True
+DEBUG    PaddleFormers:trainer.py:5337 pp_release_grads              : False
+DEBUG    PaddleFormers:trainer.py:5337 pp_sharding_comm_overlap      : False
+DEBUG    PaddleFormers:trainer.py:5337 pp_sync_moment                : False
+DEBUG    PaddleFormers:trainer.py:5337 pp_sync_param                 : False
+DEBUG    PaddleFormers:trainer.py:5337 pre_alloc_memory              : 0
+DEBUG    PaddleFormers:trainer.py:5337 prediction_loss_only          : False
+DEBUG    PaddleFormers:trainer.py:5337 prefetch_factor               : 2
+DEBUG    PaddleFormers:trainer.py:5337 process_index                 : 0
+DEBUG    PaddleFormers:trainer.py:5337 profile                       : False
+DEBUG    PaddleFormers:trainer.py:5337 profile_step_end              : 12
+DEBUG    PaddleFormers:trainer.py:5337 profile_step_start            : 10
+DEBUG    PaddleFormers:trainer.py:5337 recompute_granularity         : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_method              : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_modules             : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_mtp_granularity     : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_mtp_method          : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_mtp_modules         : None
+DEBUG    PaddleFormers:trainer.py:5337 recompute_num_layers          : None
+DEBUG    PaddleFormers:trainer.py:5337 release_grads                 : False
+DEBUG    PaddleFormers:trainer.py:5337 remove_unused_columns         : True
+DEBUG    PaddleFormers:trainer.py:5337 reorder_pipeline_priority     : False
+DEBUG    PaddleFormers:trainer.py:5337 replace_with_c_embedding      : False
+DEBUG    PaddleFormers:trainer.py:5337 replace_with_parallel_cross_entropy: False
+DEBUG    PaddleFormers:trainer.py:5337 replicate_saved_into_local    : False
+DEBUG    PaddleFormers:trainer.py:5337 report_to                     : []
+DEBUG    PaddleFormers:trainer.py:5337 resume_from_checkpoint        : None
+DEBUG    PaddleFormers:trainer.py:5337 resume_from_huggingface_ckpt  : None
+DEBUG    PaddleFormers:trainer.py:5337 run_name                      : /tmp/tmplfnbp1t9
+DEBUG    PaddleFormers:trainer.py:5337 save_checkpoint_format        : flex_checkpoint
+DEBUG    PaddleFormers:trainer.py:5337 save_hf_memory_growth_threshold: 8
+DEBUG    PaddleFormers:trainer.py:5337 save_hf_steps                 : -1
+DEBUG    PaddleFormers:trainer.py:5337 save_hf_total_limit           : None
+DEBUG    PaddleFormers:trainer.py:5337 save_last_step                : False
+DEBUG    PaddleFormers:trainer.py:5337 save_on_each_node             : False
+DEBUG    PaddleFormers:trainer.py:5337 save_rng_states               : True
+DEBUG    PaddleFormers:trainer.py:5337 save_sharded_model            : False
+DEBUG    PaddleFormers:trainer.py:5337 save_sharding_stage1_model_include_freeze_params: False
+DEBUG    PaddleFormers:trainer.py:5337 save_steps                    : 500
+DEBUG    PaddleFormers:trainer.py:5337 save_strategy                 : IntervalStrategy.STEPS
+DEBUG    PaddleFormers:trainer.py:5337 save_to_hf                    : True
+DEBUG    PaddleFormers:trainer.py:5337 save_tokenizer                : True
+DEBUG    PaddleFormers:trainer.py:5337 save_total_limit              : None
+DEBUG    PaddleFormers:trainer.py:5337 scale_loss                    : 32768
+DEBUG    PaddleFormers:trainer.py:5337 sd_release_grads              : False
+DEBUG    PaddleFormers:trainer.py:5337 sd_sharding_comm_overlap      : False
+DEBUG    PaddleFormers:trainer.py:5337 sd_shardingv1_comm_overlap    : False
+DEBUG    PaddleFormers:trainer.py:5337 seed                          : 42
+DEBUG    PaddleFormers:trainer.py:5337 send_recv_overlap             : False
+DEBUG    PaddleFormers:trainer.py:5337 sep_parallel_size             : -1
+DEBUG    PaddleFormers:trainer.py:5337 sequence_parallel             : False
+DEBUG    PaddleFormers:trainer.py:5337 sequence_parallel_config      : 
+DEBUG    PaddleFormers:trainer.py:5337 sharded_model_from_ema        : False
+DEBUG    PaddleFormers:trainer.py:5337 sharding                      : []
+DEBUG    PaddleFormers:trainer.py:5337 sharding_comm_buffer_size_MB  : -1
+DEBUG    PaddleFormers:trainer.py:5337 sharding_comm_group_call_opt  : False
+DEBUG    PaddleFormers:trainer.py:5337 sharding_degree               : -1
+DEBUG    PaddleFormers:trainer.py:5337 sharding_offload_opt_buffersize_GB: -1
+DEBUG    PaddleFormers:trainer.py:5337 sharding_parallel_config      : 
+DEBUG    PaddleFormers:trainer.py:5337 sharding_parallel_mesh_dimension: dp
+DEBUG    PaddleFormers:trainer.py:5337 sharding_parallel_rank        : 0
+DEBUG    PaddleFormers:trainer.py:5337 sharding_parallel_size        : -1
+DEBUG    PaddleFormers:trainer.py:5337 should_load_dataset           : True
+DEBUG    PaddleFormers:trainer.py:5337 should_load_sharding_stage1_model: False
+DEBUG    PaddleFormers:trainer.py:5337 should_log                    : True
+DEBUG    PaddleFormers:trainer.py:5337 should_save                   : True
+DEBUG    PaddleFormers:trainer.py:5337 should_save_model_state       : True
+DEBUG    PaddleFormers:trainer.py:5337 should_save_model_with_tensor_fusion: False
+DEBUG    PaddleFormers:trainer.py:5337 should_save_sharding_stage1_model: False
+DEBUG    PaddleFormers:trainer.py:5337 skip_data_intervals           : None
+DEBUG    PaddleFormers:trainer.py:5337 skip_memory_metrics           : True
+DEBUG    PaddleFormers:trainer.py:5337 skip_profile_timer            : True
+DEBUG    PaddleFormers:trainer.py:5337 sp_allreduce_avg_in_gradinent_scale: False
+DEBUG    PaddleFormers:trainer.py:5337 sp_async_reduce_scatter       : False
+DEBUG    PaddleFormers:trainer.py:5337 split_backward                : False
+DEBUG    PaddleFormers:trainer.py:5337 split_inputs_sequence_dim     : True
+DEBUG    PaddleFormers:trainer.py:5337 split_norm_comm               : False
+DEBUG    PaddleFormers:trainer.py:5337 split_param                   : True
+DEBUG    PaddleFormers:trainer.py:5337 stage1_allgather_overlap      : False
+DEBUG    PaddleFormers:trainer.py:5337 stage1_broadcast_overlap      : False
+DEBUG    PaddleFormers:trainer.py:5337 stage1_overlap                : False
+DEBUG    PaddleFormers:trainer.py:5337 stage1_reduce_avg             : True
+DEBUG    PaddleFormers:trainer.py:5337 stage1_tensor_fusion          : False
+DEBUG    PaddleFormers:trainer.py:5337 stage2_overlap                : False
+DEBUG    PaddleFormers:trainer.py:5337 sync_grad                     : False
+DEBUG    PaddleFormers:trainer.py:5337 tensor_fusion                 : False
+DEBUG    PaddleFormers:trainer.py:5337 tensor_model_parallel_size    : -1
+DEBUG    PaddleFormers:trainer.py:5337 tensor_parallel_config        : 
+DEBUG    PaddleFormers:trainer.py:5337 tensor_parallel_rank          : 0
+DEBUG    PaddleFormers:trainer.py:5337 tensorwise_offload_optimizer  : False
+DEBUG    PaddleFormers:trainer.py:5337 timer                         : False
+DEBUG    PaddleFormers:trainer.py:5337 to_static                     : False
+DEBUG    PaddleFormers:trainer.py:5337 tp_async_allreduce            : False
+DEBUG    PaddleFormers:trainer.py:5337 tp_sync_moment                : False
+DEBUG    PaddleFormers:trainer.py:5337 tp_sync_param                 : False
+DEBUG    PaddleFormers:trainer.py:5337 train_batch_size              : 8
+DEBUG    PaddleFormers:trainer.py:5337 train_mtp_only                : False
+DEBUG    PaddleFormers:trainer.py:5337 unified_checkpoint            : False
+DEBUG    PaddleFormers:trainer.py:5337 unified_checkpoint_config     : 
+DEBUG    PaddleFormers:trainer.py:5337 use_async_save                : False
+DEBUG    PaddleFormers:trainer.py:5337 use_cache                     : False
+DEBUG    PaddleFormers:trainer.py:5337 use_dualpipev                 : False
+DEBUG    PaddleFormers:trainer.py:5337 use_expert_parallel           : False
+DEBUG    PaddleFormers:trainer.py:5337 use_hybrid_parallel           : False
+DEBUG    PaddleFormers:trainer.py:5337 use_intermediate_api          : False
+DEBUG    PaddleFormers:trainer.py:5337 use_lowprecision_moment       : False
+DEBUG    PaddleFormers:trainer.py:5337 using_sonic_moe               : False
+DEBUG    PaddleFormers:trainer.py:5337 variable_seq_lengths          : False
+DEBUG    PaddleFormers:trainer.py:5337 wandb_api_key                 : None
+DEBUG    PaddleFormers:trainer.py:5337 wandb_http_proxy              : None
+DEBUG    PaddleFormers:trainer.py:5337 warmup_ratio                  : 0.0
+DEBUG    PaddleFormers:trainer.py:5337 warmup_steps                  : 0
+DEBUG    PaddleFormers:trainer.py:5337 weight_decay                  : 0.0
+DEBUG    PaddleFormers:trainer.py:5337 weight_name_suffix            : None
+DEBUG    PaddleFormers:trainer.py:5337 world_size                    : 1
+DEBUG    PaddleFormers:trainer.py:5337 zcc_ema_interval              : 1
+DEBUG    PaddleFormers:trainer.py:5337 zcc_ema_loss_threshold        : None
+DEBUG    PaddleFormers:trainer.py:5337 zcc_pipeline_hooks_capacity_usage: 0.6
+DEBUG    PaddleFormers:trainer.py:5337 zcc_save_ema_coef             : None
+DEBUG    PaddleFormers:trainer.py:5337 zcc_workers_num               : 3
+DEBUG    PaddleFormers:trainer.py:5339

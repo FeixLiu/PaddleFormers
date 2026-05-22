@@ -1,0 +1,480 @@
+INFO     PaddleFormers:testing_utils.py:614 Ernie4_5_VLModelTest [PID:2682] Device: gpu:0
+INFO     PaddleFormers:modeling_moe.py:1481 change initializer-range from 0.02 to 0.10205696938475098
+INFO     PaddleFormers:modeling_moe.py:291 using moe-group: mp
+INFO     PaddleFormers:modeling.py:643 use GQA - num_heads: 4- num_key_value_heads: 2
+INFO     PaddleFormers:modeling.py:643 use GQA - num_heads: 4- num_key_value_heads: 2
+DEBUG    PaddleFormers:modeling_moe.py:182 using moe-world-size: 1 expert-per-device:8,
+INFO     PaddleFormers:modeling_moe.py:183 MOE-GATE:-topk
+INFO     PaddleFormers:topk_gate.py:244 use moe_use_hard_gate, experts_ids: Tensor(shape=[8], dtype=int64, place=Place(gpu:0), stop_gradient=True,
+       [0, 0, 0, 0, 1, 1, 1, 1])
+INFO     PaddleFormers:topk_gate.py:266 topk: w/ capacity: [8, 8, 8] experts:[4, 4] use_token_type_bias:False gate_act:softmax norm_gate_logits=True use_correction_bias=True
+INFO     PaddleFormers:topk_gate.py:260 moe use gate_weight from outside
+INFO     PaddleFormers:topk_gate.py:266 topk: w/ capacity: [8, 8, 8] experts:4 use_token_type_bias:False gate_act:softmax norm_gate_logits=True use_correction_bias=True
+INFO     PaddleFormers:modeling_moe.py:253 LM-experts-LayerList(
+  (0): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (1): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (2): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (3): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+) -- experts-LayerList(
+  (0): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (1): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (2): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (3): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (4): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+  (5): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+  (6): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+  (7): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+)
+INFO     PaddleFormers:modeling_moe.py:448 Enable MOEAllGatherLayerV2!
+INFO     PaddleFormers:modeling_moe.py:459 moe-logging: v2-alltoall-unpad-text moe_cls=functools.partial(<class 'paddleformers.transformers.ernie4_5_moe_vl.model.moe.moe_all_gather_layer.MOEAllGatherLayerV2'>, use_expert_out_alltoall=True, use_padding=False, enable_reverse_token_drop=False, dense_token_type=3)
+INFO     PaddleFormers:moe_layer.py:434 using correction bias, aux-coef:0.01
+INFO     PaddleFormers:moe_all_gather_layer.py:811 uisng MOEAllGatherLayerV2, use_expert_out_alltoall=True, use_padding=False, enable_reverse_token_drop=False
+INFO     PaddleFormers:moe_layer.py:434 using correction bias, aux-coef:0.01
+INFO     PaddleFormers:moe_all_gather_layer.py:811 uisng MOEAllGatherLayerV2, use_expert_out_alltoall=True, use_padding=False, enable_reverse_token_drop=False
+INFO     PaddleFormers:modeling.py:643 use GQA - num_heads: 4- num_key_value_heads: 2
+DEBUG    PaddleFormers:modeling_moe.py:182 using moe-world-size: 1 expert-per-device:8,
+INFO     PaddleFormers:modeling_moe.py:183 MOE-GATE:-topk
+INFO     PaddleFormers:topk_gate.py:244 use moe_use_hard_gate, experts_ids: Tensor(shape=[8], dtype=int64, place=Place(gpu:0), stop_gradient=True,
+       [0, 0, 0, 0, 1, 1, 1, 1])
+INFO     PaddleFormers:topk_gate.py:266 topk: w/ capacity: [8, 8, 8] experts:[4, 4] use_token_type_bias:False gate_act:softmax norm_gate_logits=True use_correction_bias=True
+INFO     PaddleFormers:topk_gate.py:260 moe use gate_weight from outside
+INFO     PaddleFormers:topk_gate.py:266 topk: w/ capacity: [8, 8, 8] experts:4 use_token_type_bias:False gate_act:softmax norm_gate_logits=True use_correction_bias=True
+INFO     PaddleFormers:modeling_moe.py:253 LM-experts-LayerList(
+  (0): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (1): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (2): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (3): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+) -- experts-LayerList(
+  (0): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (1): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (2): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (3): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (4): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+  (5): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+  (6): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+  (7): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+)
+INFO     PaddleFormers:modeling_moe.py:448 Enable MOEAllGatherLayerV2!
+INFO     PaddleFormers:modeling_moe.py:459 moe-logging: v2-alltoall-unpad-text moe_cls=functools.partial(<class 'paddleformers.transformers.ernie4_5_moe_vl.model.moe.moe_all_gather_layer.MOEAllGatherLayerV2'>, use_expert_out_alltoall=True, use_padding=False, enable_reverse_token_drop=False, dense_token_type=3)
+INFO     PaddleFormers:moe_layer.py:434 using correction bias, aux-coef:0.01
+INFO     PaddleFormers:moe_all_gather_layer.py:811 uisng MOEAllGatherLayerV2, use_expert_out_alltoall=True, use_padding=False, enable_reverse_token_drop=False
+INFO     PaddleFormers:moe_layer.py:434 using correction bias, aux-coef:0.01
+INFO     PaddleFormers:moe_all_gather_layer.py:811 uisng MOEAllGatherLayerV2, use_expert_out_alltoall=True, use_padding=False, enable_reverse_token_drop=False
+INFO     PaddleFormers:modeling.py:1609 output-weight:paddle.Size([120000, 32]) config.tie_word_embeddings=True
+INFO     PaddleFormers:modeling_moe.py:1495 Use fusedRMSNorm
+INFO     PaddleFormers:modeling.py:1609 output-weight:paddle.Size([120000, 32]) config.tie_word_embeddings=True
+INFO     PaddleFormers:model_utils.py:3896 [Rank 0/1] (Saver) Initializing save. Max shard size set to: 10.00 GB
+INFO     PaddleFormers:model_utils.py:3931 [Rank 0/1] Starting to process the weight iterator...
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter lm_head.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.embed_tokens.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.input_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.mlp.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.mlp.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.mlp.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.post_attention_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.k_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.o_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.q_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.v_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.input_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.0.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.0.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.0.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.1.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.1.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.1.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.2.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.2.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.2.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.3.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.3.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.3.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.4.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.4.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.4.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.5.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.5.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.5.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.6.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.6.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.6.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.7.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.7.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.experts.7.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.gate.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.gate.weight_1
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.moe_statics.e_score_correction_bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.shared_experts.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.shared_experts.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.mlp.shared_experts.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.post_attention_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.k_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.o_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.q_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.v_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.input_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.0.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.0.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.0.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.1.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.1.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.1.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.2.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.2.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.2.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.3.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.3.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.3.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.4.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.4.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.4.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.5.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.5.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.5.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.6.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.6.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.6.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.7.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.7.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.experts.7.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.gate.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.gate.weight_1
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.moe_statics.e_score_correction_bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.shared_experts.down_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.shared_experts.gate_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.mlp.shared_experts.up_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.post_attention_layernorm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.self_attn.k_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.self_attn.o_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.self_attn.q_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.layers.2.self_attn.v_proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.norm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.after_norm.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.mlp.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.mlp.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.spatial_linear.0.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.spatial_linear.0.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.spatial_linear.2.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.spatial_linear.2.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.spatial_linear.3.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.spatial_linear.3.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.temporal_linear.0.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.temporal_linear.0.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.temporal_linear.2.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.temporal_linear.2.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.temporal_linear.3.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter model.resampler_model.temporal_linear.3.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.0.attn.proj.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.0.attn.proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.0.attn.qkv.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.0.attn.qkv.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.0.mlp.fc1.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.0.mlp.fc1.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.0.mlp.fc2.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.0.mlp.fc2.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.0.norm1.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.0.norm1.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.0.norm2.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.0.norm2.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.1.attn.proj.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.1.attn.proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.1.attn.qkv.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.1.attn.qkv.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.1.mlp.fc1.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.1.mlp.fc1.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.1.mlp.fc2.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.1.mlp.fc2.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.1.norm1.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.1.norm1.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.1.norm2.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.1.norm2.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.2.attn.proj.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.2.attn.proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.2.attn.qkv.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.2.attn.qkv.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.2.mlp.fc1.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.2.mlp.fc1.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.2.mlp.fc2.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.2.mlp.fc2.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.2.norm1.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.2.norm1.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.2.norm2.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.2.norm2.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.3.attn.proj.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.3.attn.proj.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.3.attn.qkv.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.3.attn.qkv.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.3.mlp.fc1.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.3.mlp.fc1.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.3.mlp.fc2.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.3.mlp.fc2.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.3.norm1.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.3.norm1.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.3.norm2.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.blocks.3.norm2.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.ln.bias
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.ln.weight
+INFO     PaddleFormers:model_utils.py:3939 [Rank 0/1] Assigned to store parameter vision_model.patch_embed.proj.weight
+INFO     PaddleFormers:model_utils.py:3917 [Rank 0/1] Saving sub-shard 0... Size: 15.06 MB, Params: 150, Path: /tmp/tmpc971pzci/shard_0-0.safetensors
+INFO     PaddleFormers:model_utils.py:3949 [Rank 0/1] (Saver) All shards saved successfully.
+INFO     PaddleFormers:configuration_utils.py:1059 Configuration saved in /tmp/tmpc971pzci/config.json
+INFO     PaddleFormers:configuration_utils.py:334 Configuration saved in /tmp/tmpc971pzci/generation_config.json
+INFO     PaddleFormers:download.py:146 Using download source: aistudio
+INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmpc971pzci/config.json
+INFO     PaddleFormers:model_utils.py:2154 Loading weights file /tmp/tmpc971pzci/model.safetensors.index.json
+INFO     PaddleFormers:modeling_moe.py:1481 change initializer-range from 0.10205696938475098 to 0.10205696938475098
+INFO     PaddleFormers:modeling_moe.py:291 using moe-group: dummy
+INFO     PaddleFormers:modeling.py:643 use GQA - num_heads: 4- num_key_value_heads: 2
+INFO     PaddleFormers:modeling.py:643 use GQA - num_heads: 4- num_key_value_heads: 2
+DEBUG    PaddleFormers:modeling_moe.py:182 using moe-world-size: 1 expert-per-device:8,
+INFO     PaddleFormers:modeling_moe.py:183 MOE-GATE:-topk
+INFO     PaddleFormers:topk_gate.py:244 use moe_use_hard_gate, experts_ids: Tensor(shape=[8], dtype=int64, place=Place(gpu:0), stop_gradient=True,
+       [0, 0, 0, 0, 1, 1, 1, 1])
+INFO     PaddleFormers:topk_gate.py:266 topk: w/ capacity: [8, 8, 8] experts:[4, 4] use_token_type_bias:False gate_act:softmax norm_gate_logits=True use_correction_bias=True
+INFO     PaddleFormers:topk_gate.py:260 moe use gate_weight from outside
+INFO     PaddleFormers:topk_gate.py:266 topk: w/ capacity: [8, 8, 8] experts:4 use_token_type_bias:False gate_act:softmax norm_gate_logits=True use_correction_bias=True
+INFO     PaddleFormers:modeling_moe.py:253 LM-experts-LayerList(
+  (0): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (1): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (2): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (3): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+) -- experts-LayerList(
+  (0): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (1): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (2): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (3): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (4): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+  (5): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+  (6): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+  (7): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+)
+INFO     PaddleFormers:modeling_moe.py:448 Enable MOEAllGatherLayerV2!
+INFO     PaddleFormers:modeling_moe.py:459 moe-logging: v2-alltoall-unpad-text moe_cls=functools.partial(<class 'paddleformers.transformers.ernie4_5_moe_vl.model.moe.moe_all_gather_layer.MOEAllGatherLayerV2'>, use_expert_out_alltoall=True, use_padding=False, enable_reverse_token_drop=False, dense_token_type=3)
+INFO     PaddleFormers:moe_layer.py:434 using correction bias, aux-coef:0.01
+INFO     PaddleFormers:moe_all_gather_layer.py:811 uisng MOEAllGatherLayerV2, use_expert_out_alltoall=True, use_padding=False, enable_reverse_token_drop=False
+INFO     PaddleFormers:moe_layer.py:434 using correction bias, aux-coef:0.01
+INFO     PaddleFormers:moe_all_gather_layer.py:811 uisng MOEAllGatherLayerV2, use_expert_out_alltoall=True, use_padding=False, enable_reverse_token_drop=False
+INFO     PaddleFormers:modeling.py:643 use GQA - num_heads: 4- num_key_value_heads: 2
+DEBUG    PaddleFormers:modeling_moe.py:182 using moe-world-size: 1 expert-per-device:8,
+INFO     PaddleFormers:modeling_moe.py:183 MOE-GATE:-topk
+INFO     PaddleFormers:topk_gate.py:244 use moe_use_hard_gate, experts_ids: Tensor(shape=[8], dtype=int64, place=Place(gpu:0), stop_gradient=True,
+       [0, 0, 0, 0, 1, 1, 1, 1])
+INFO     PaddleFormers:topk_gate.py:266 topk: w/ capacity: [8, 8, 8] experts:[4, 4] use_token_type_bias:False gate_act:softmax norm_gate_logits=True use_correction_bias=True
+INFO     PaddleFormers:topk_gate.py:260 moe use gate_weight from outside
+INFO     PaddleFormers:topk_gate.py:266 topk: w/ capacity: [8, 8, 8] experts:4 use_token_type_bias:False gate_act:softmax norm_gate_logits=True use_correction_bias=True
+INFO     PaddleFormers:modeling_moe.py:253 LM-experts-LayerList(
+  (0): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (1): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (2): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (3): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+) -- experts-LayerList(
+  (0): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (1): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (2): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (3): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+    (down_proj): Linear(in_features=32, out_features=32, dtype=bfloat16)
+  )
+  (4): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+  (5): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+  (6): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+  (7): Ernie4_5_MoeMLP(
+    (up_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (gate_proj): Linear(in_features=32, out_features=16, dtype=bfloat16)
+    (down_proj): Linear(in_features=16, out_features=32, dtype=bfloat16)
+  )
+)
+INFO     PaddleFormers:modeling_moe.py:448 Enable MOEAllGatherLayerV2!
+INFO     PaddleFormers:modeling_moe.py:459 moe-logging: v2-alltoall-unpad-text moe_cls=functools.partial(<class 'paddleformers.transformers.ernie4_5_moe_vl.model.moe.moe_all_gather_layer.MOEAllGatherLayerV2'>, use_expert_out_alltoall=True, use_padding=False, enable_reverse_token_drop=False, dense_token_type=3)
+INFO     PaddleFormers:moe_layer.py:434 using correction bias, aux-coef:0.01
+INFO     PaddleFormers:moe_all_gather_layer.py:811 uisng MOEAllGatherLayerV2, use_expert_out_alltoall=True, use_padding=False, enable_reverse_token_drop=False
+INFO     PaddleFormers:moe_layer.py:434 using correction bias, aux-coef:0.01
+INFO     PaddleFormers:moe_all_gather_layer.py:811 uisng MOEAllGatherLayerV2, use_expert_out_alltoall=True, use_padding=False, enable_reverse_token_drop=False
+INFO     PaddleFormers:modeling.py:1609 output-weight:paddle.Size([120000, 32]) config.tie_word_embeddings=True
+INFO     PaddleFormers:modeling_moe.py:1495 Use fusedRMSNorm
+INFO     PaddleFormers:modeling.py:1609 output-weight:paddle.Size([120000, 32]) config.tie_word_embeddings=True
