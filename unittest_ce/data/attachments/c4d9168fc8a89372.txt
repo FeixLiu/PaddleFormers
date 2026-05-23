@@ -1,4 +1,0 @@
-INFO     PaddleFormers:mllm_utils.py:127 LoRA target modules filtered by [freeze_llm]:
-+ [llm] removed 2 targets:
-  - model.language_model.layers.0.self_attn.weight
-  - lm_head.weight

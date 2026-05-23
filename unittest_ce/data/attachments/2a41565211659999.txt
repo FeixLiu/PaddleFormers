@@ -1,1 +1,0 @@
-WARNING  PaddleFormers:mllm_utils.py:135 Model has no config.model_type, skip freezing.

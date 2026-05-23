@@ -1,6 +1,0 @@
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /home/models/PaddleFormers/tiny-random-qwen3/config.json
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen3
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /home/models/PaddleFormers/tiny-random-qwen3/config.json

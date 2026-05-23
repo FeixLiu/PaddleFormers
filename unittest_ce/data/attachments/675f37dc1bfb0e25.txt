@@ -1,4 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 TestQwenVisionProcessing [PID:2682] Device: gpu:0
-INFO     PaddleFormers:vision_process.py:295 Loading video with paddlecodec backend.
-INFO     PaddleFormers:vision_process.py:297 set PADDLECODEC_NUM_THREADS: 0 (Auto)
-INFO     PaddleFormers:vision_process.py:314 paddlecodec:  video_path='http://paddlenlp.bj.bcebos.com/datasets/paddlemix/demo_video/example_video.mp4', total_frames=263, video_fps=29.99418249715141, time=1.673s

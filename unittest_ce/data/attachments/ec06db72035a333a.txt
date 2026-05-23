@@ -1,6 +1,0 @@
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmpz7wm1w4p/config.json
-INFO     PaddleFormers:configuration.py:363 We are using <class 'paddleformers.transformers.qwen3.configuration.Qwen3Config'> to load '/tmp/tmpz7wm1w4p'.
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmpz7wm1w4p/config.json

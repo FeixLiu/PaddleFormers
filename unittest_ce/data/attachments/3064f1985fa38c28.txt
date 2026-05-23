@@ -1,1 +1,0 @@
-WARNING  PaddleFormers:template.py:544 `template` was not specified, try parsing the chat template from the tokenizer.

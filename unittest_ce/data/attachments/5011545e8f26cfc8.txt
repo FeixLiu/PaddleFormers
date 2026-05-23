@@ -1,1 +1,0 @@
-WARNING  PaddleFormers:load_hf_ckpt.py:269 attention same shape not transpose !!!

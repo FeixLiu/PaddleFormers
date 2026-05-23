@@ -1,1 +1,0 @@
-INFO     PaddleFormers:moe_alltoall_layer.py:155 using fused experts, type=<class 'test_ai_moe_alltoall_layer.TestMOEAlltoAllLayerForwardExperts.test_forward_experts_fused_experts.<locals>.FusedExperts'>

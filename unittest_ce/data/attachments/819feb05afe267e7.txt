@@ -1,4 +1,0 @@
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/PaddleFormers/tiny-random-qwen2v2
-INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
-WARNING  PaddleFormers:log.py:135 Warning: apply_chat_template() called without explicit `add_generation_prompt` parameter. Current default=True differs from Hugging Face's default=False. Always specify this parameter to ensure consistent behavior across versions.

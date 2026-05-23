@@ -1,6 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 DeepseekV3ModelTest [PID:2682] Device: gpu:0
-WARNING  PaddleFormers:modeling_rope_utils.py:732 `rope_parameters`'s factor field must be a float >= 1, got 40
-WARNING  PaddleFormers:modeling_rope_utils.py:741 `rope_parameters`'s beta_fast field must be a float, got 32
-WARNING  PaddleFormers:modeling_rope_utils.py:744 `rope_parameters`'s beta_slow field must be a float, got 1
-WARNING  PaddleFormers:log.py:135 The explicitly set RoPE scaling factor (config.rope_parameters['factor'] = 40) does not match the ratio implicitly set by other parameters (implicit factor = post-yarn context length / pre-yarn context length = config.max_position_embeddings / config.rope_parameters['original_max_position_embeddings'] = 0.125). Using the explicit factor (40) in YaRN. This may cause unexpected behaviour in model usage, please correct the 'max_position_embeddings' fields in the model config.
-INFO     PaddleFormers:interface.py:54 loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False

@@ -1,4 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 DeepseekV3ModelTest [PID:2682] Device: gpu:0
-WARNING  PaddleFormers:modeling_rope_utils.py:732 `rope_parameters`'s factor field must be a float >= 1, got 40
-WARNING  PaddleFormers:modeling_rope_utils.py:741 `rope_parameters`'s beta_fast field must be a float, got 32
-WARNING  PaddleFormers:modeling_rope_utils.py:744 `rope_parameters`'s beta_slow field must be a float, got 1

@@ -1,1 +1,0 @@
-WARNING  PaddleFormers:data_utils.py:56 The length of text (20) cannot be greater than max input length             (10).             We will truncate it.

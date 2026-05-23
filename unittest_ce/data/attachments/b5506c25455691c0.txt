@@ -1,3 +1,0 @@
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/Paddleformers/tiny-random-llama
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/Paddleformers/tiny-random-llama
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /home/models/Paddleformers/tiny-random-llama/config.json

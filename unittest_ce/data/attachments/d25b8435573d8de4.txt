@@ -1,7 +1,0 @@
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/Paddleformers/tiny-random-llama
-WARNING  PaddleFormers:download.py:150 The repo id check failed, changed to /home/models/Paddleformers/tiny-random-llama
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /home/models/Paddleformers/tiny-random-llama/config.json
-INFO     PaddleFormers:configuration_utils.py:1059 Configuration saved in /tmp/tmpusmd232c/config.json
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:configuration_utils.py:1219 Loading configuration file /tmp/tmpusmd232c/config.json

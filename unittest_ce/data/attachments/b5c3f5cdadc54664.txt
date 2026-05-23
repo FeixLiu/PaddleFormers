@@ -1,4 +1,0 @@
-INFO     PaddleFormers:testing_utils.py:614 Qwen2VLVideoProcessingTest [PID:2682] Device: gpu:0
-INFO     PaddleFormers:video_processing_utils.py:449 Video processor saved in /tmp/tmpmttqrlqa/video_preprocessor_config.json
-INFO     PaddleFormers:video_processing_utils.py:462 Using download source: aistudio
-INFO     PaddleFormers:video_processing_utils.py:517 loading configuration file /tmp/tmpmttqrlqa/video_preprocessor_config.json

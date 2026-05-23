@@ -1,2 +1,0 @@
-INFO     PaddleFormers:unified_checkpoint_quantization.py:165 Start unified checkpoint quantization, stage O1.
-INFO     PaddleFormers:unified_checkpoint_quantization.py:219 Unified checkpoint quantization done, stage O1.

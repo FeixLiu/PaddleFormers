@@ -1,1 +1,0 @@
-WARNING  PaddleFormers:log.py:135 insupportable scoring function for MoE gating: None, use softmax instead

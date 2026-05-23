@@ -1,7 +1,0 @@
-INFO     PaddleFormers:download.py:146 Using download source: aistudio
-INFO     PaddleFormers:tokenizer_utils.py:293 Using download source: aistudio
-INFO     PaddleFormers:SFTDataset.py:70 self.dataset_num_proc: 1
-INFO     PaddleFormers:SFTDataset.py:103 [dataflow] truncation_strategy: delete
-INFO     PaddleFormers:SFTDataset.py:128 self.num_reserved_tokens_for_each_dialog: 2
-INFO     PaddleFormers:file_reader.py:108 Loading /workspace/PaddleFormers/tests/fixtures/dummy/sft/train.jsonl as stream.
-INFO     PaddleFormers:file_reader.py:108 Loading /workspace/PaddleFormers/tests/fixtures/dummy/sft/train.jsonl as stream.
