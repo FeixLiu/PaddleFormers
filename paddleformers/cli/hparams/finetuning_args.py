@@ -20,6 +20,7 @@ from paddle.distributed import fleet
 
 from paddleformers.trainer import TrainingArguments
 from paddleformers.transformers.configuration_utils import llmmetaclass
+from paddleformers.utils.accuracy_target import ACCURACY_TARGET_MEGATRON
 from paddleformers.utils.log import logger
 
 DEFAULT_QUANTIZE_LAYERS = [".*mlp.*", ".*self_attn.*"]
@@ -354,7 +355,16 @@ class FinetuningArguments(
                 "as True, its historical meaning) aligns with Megatron-LM; 'hf' aligns "
                 "with the HuggingFace/Torch reference. Normalized by "
                 "paddleformers.utils.accuracy_target.normalize_accuracy_target."
-            )
+            ),
+            # ``PdArgumentParser`` forwards unknown metadata keys straight to
+            # ``parser.add_argument``, and it only synthesizes these two for
+            # ``bool`` fields. Declaring them keeps the historical valueless
+            # spelling ``--use_accuracy_compatible`` working: it used to mean
+            # ``True``, whose canonical name is now "megatron". Without them the
+            # str field would demand an argument and every existing launch
+            # command using the bare flag would fail to parse.
+            "nargs": "?",
+            "const": ACCURACY_TARGET_MEGATRON,
         },
     )
 

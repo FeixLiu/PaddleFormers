@@ -68,6 +68,8 @@ from .accuracy_target import ACCURACY_TARGET_HF
 __all__ = [
     "HFBitexactClipGradByGlobalNorm",
     "hf_bitexact_clip_enabled",
+    "hf_norm_partition_size",
+    "verify_hf_norm_groups_registered",
 ]
 
 
@@ -95,23 +97,120 @@ def _bf16(value: paddle.Tensor) -> paddle.Tensor:
 
 # -- shared primitives ---------------------------------------------------------
 #
-# These four are the *recipe* of ``torch.nn.utils.clip_grad_norm_`` and are used
-# both by the single-card clip below and by ``MoEHybridParallelClipGrad`` so the
-# distributed path keeps the exact same roundings. In the distributed setting
-# each rank holds a shard of the model, so the per-tensor BF16 norms are
-# computed locally, their squares are what travel through the all-reduce, and
-# the global norm / coefficient / scaling steps are shared verbatim.
+# These are the *recipe* of ``torch.nn.utils.clip_grad_norm_`` and are used by the
+# single-card clip below and by both distributed wrappers
+# (``MoEHybridParallelClipGrad``, ``HFBitexactHybridParallelClipGrad``) so every
+# path keeps the exact same roundings. In the distributed setting each rank holds
+# a shard of the model, so the per-tensor BF16 norms are computed locally, their
+# squares are what travel through the all-reduce, and the global norm /
+# coefficient / scaling steps are shared verbatim.
 
 
-def _hf_norm_sq(g: paddle.Tensor) -> paddle.Tensor:
-    """FP32 square of the BF16-rounded L2 norm of ``g`` (a ``[1]`` tensor).
+def hf_norm_groups(param):
+    """Column groups ``param`` must be split into before norming, or ``None``.
+
+    PaddleFleet fuses projections the reference keeps separate (GDN's four
+    ``in_proj_*``, attention's ``q/k/v_proj``, the shared expert's
+    ``gate_proj``/``up_proj``) and publishes the reference's column partition on
+    the parameter as ``hf_norm_groups``. Gradient clipping is **partition
+    sensitive**: torch takes one BF16 per-tensor norm per ``nn.Linear`` and sums
+    their squares, and ``bf16(sqrt(a^2+b^2))^2 != bf16(sqrt(a^2))^2 +
+    bf16(sqrt(b^2))^2`` in general -- rounding each sub-norm to BF16 first
+    discards different bits than rounding the combined one. Norming each group
+    separately takes the global norm over the reference's tensor partition
+    rather than the fused one.
+
+    Parameters the reference also keeps fused (the routed experts' batched
+    ``gate_up_proj``, the vision tower's ``linear_fc1``) publish nothing and are
+    normed whole, which is what the reference does with them.
+    """
+    return getattr(param, "hf_norm_groups", None)
+
+
+def hf_param_norms(param, g: paddle.Tensor) -> list:
+    """The BF16 per-tensor norms ``param`` contributes, as FP32 scalars.
 
     Torch's ``_foreach_norm`` on a BF16 tensor uses FP32 opmath and rounds the
-    result to BF16. The square is exact in FP32 (a BF16 value fits), so sending
-    the squared BF16 norm through the distributed reduction loses nothing.
+    result to BF16, which is the rounding each entry here reproduces. There is
+    one entry for an unfused parameter and one per group for a fused one, which
+    is what torch produces for the separate ``nn.Linear`` modules the groups
+    stand for.
     """
-    norm = _bf16(paddle.sqrt(paddle.sum(g.astype("float32") * g.astype("float32"), dtype="float32")))
-    return norm * norm
+    gf = g.astype("float32")
+    groups = hf_norm_groups(param)
+    if not groups:
+        return [_bf16(paddle.sqrt(paddle.sum(gf * gf, dtype="float32")))]
+    flat = gf.reshape([-1, gf.shape[-1]])
+    norms = []
+    for columns in groups:
+        sub = flat.index_select(axis=-1, index=columns)
+        norms.append(_bf16(paddle.sqrt(paddle.sum(sub * sub, dtype="float32"))))
+    return norms
+
+
+def hf_param_norm_sq(param, g: paddle.Tensor) -> paddle.Tensor:
+    """Sum of the squared BF16 per-tensor norms of ``param``.
+
+    Drop-in replacement for ``clip._squared_l2_norm`` in the distributed
+    wrappers: it returns a single FP32 scalar, so their dtype bucketing and
+    all-reduce need no change, while a fused parameter still contributes the
+    reference's several norms instead of one over the whole block. Squaring a
+    BF16 value is exact in FP32, so nothing is lost on the way to the reduction.
+    """
+    total = None
+    for norm in hf_param_norms(param, g):
+        squared = norm * norm
+        total = squared if total is None else total + squared
+    return total
+
+
+def hf_norm_partition_size(parameters) -> tuple:
+    """``(fused_tensors, reference_tensors)`` for ``parameters``.
+
+    The two numbers are the size of the partition the global norm would be taken
+    over without and with ``hf_norm_groups``. They differ by exactly the extra
+    tensors the reference's separate ``nn.Linear`` modules add, which is the
+    quantity that decides the global norm, so logging them makes a missing
+    registration visible in the training log instead of only in the loss.
+    """
+    fused = 0
+    reference = 0
+    for param in parameters:
+        fused += 1
+        groups = hf_norm_groups(param)
+        reference += len(groups) if groups else 1
+    return fused, reference
+
+
+def verify_hf_norm_groups_registered(model) -> tuple:
+    """Fail if no parameter publishes ``hf_norm_groups``.
+
+    The clip needs the reference's tensor partition, and the modules that fuse
+    projections are the ones that know it, so they publish it (PaddleFleet's
+    ``attention``, ``gated_delta_net`` and ``moe_shared_expert`` do this at
+    construction time, guarded by the same accuracy target). If the installed
+    PaddleFleet predates that, every fused projection is normed as one block: the
+    run does not fail, it just stops being bit-exact once the coefficient drops
+    below 1.0. That silent degradation is worse than a crash -- any numbers
+    collected from such a run look aligned and are not -- so require at least one
+    registration and say what is missing.
+
+    Returns the ``(fused, reference)`` partition sizes for logging.
+    """
+    parameters = [p for p in model.parameters() if not p.stop_gradient]
+    fused, reference = hf_norm_partition_size(parameters)
+    if reference == fused:
+        raise RuntimeError(
+            "use_accuracy_compatible='hf' requires gradient clipping over the reference's "
+            "tensor partition, but none of the "
+            f"{fused} trainable parameters publishes 'hf_norm_groups'. The fused projections "
+            "(attention qkv_proj, gated_delta_net in_proj, the shared expert's up_gate_proj) "
+            "register it at construction time; an installed PaddleFleet without that support "
+            "would norm each fused block as one tensor and silently lose bit-exactness as soon "
+            "as the clip coefficient drops below 1.0. Update PaddleFleet, or set max_grad_norm=0 "
+            "to run without clipping."
+        )
+    return fused, reference
 
 
 def _hf_global_norm(total_sq: paddle.Tensor) -> paddle.Tensor:
@@ -165,23 +264,6 @@ class HFBitexactClipGradByGlobalNorm(nn.ClipGradByGlobalNorm):
         self.last_clip_coef: Optional[float] = None
 
     # -- the clip itself -----------------------------------------------------
-    @staticmethod
-    def _norm_groups(param):
-        """Column groups this parameter must be split into before norming.
-
-        PaddleFleet fuses projections the reference keeps separate (GDN's four
-        ``in_proj_*``, attention's ``q/k/v_proj``, the shared expert's
-        ``gate_proj``/``up_proj``). Gradient clipping is **partition sensitive**:
-        torch takes one BF16 per-tensor norm per ``nn.Linear`` and sums their
-        squares, and ``bf16(sqrt(a^2+b^2))^2 != bf16(sqrt(a^2))^2 +
-        bf16(sqrt(b^2))^2`` in general -- rounding each sub-norm to BF16 first
-        discards different bits than rounding the combined one. The modules that
-        fuse therefore publish ``hf_norm_groups``, and the clip norms each group
-        separately so the global norm is taken over the reference's 141-tensor
-        partition rather than the fused 111-tensor one.
-        """
-        return getattr(param, "hf_norm_groups", None)
-
     @paddle.no_grad()
     def _dygraph_clip(self, params_grads):
         selected = [(p, g) for p, g in params_grads if g is not None and getattr(p, "need_clip", True)]
@@ -192,15 +274,7 @@ class HFBitexactClipGradByGlobalNorm(nn.ClipGradByGlobalNorm):
         #     REFERENCE's tensor partition (fused projections are split first).
         per_tensor = []
         for p, g in selected:
-            gf = g.astype("float32")
-            groups = self._norm_groups(p)
-            if groups:
-                flat = gf.reshape([-1, gf.shape[-1]])
-                for columns in groups:
-                    sub = flat.index_select(axis=-1, index=columns)
-                    per_tensor.append(_bf16(paddle.sqrt(paddle.sum(sub * sub, dtype="float32"))))
-            else:
-                per_tensor.append(_bf16(paddle.sqrt(paddle.sum(gf * gf, dtype="float32"))))
+            per_tensor.extend(hf_param_norms(p, g))
 
         # (2) global norm over the BF16 per-tensor norms: FP32 accumulate -> sqrt -> BF16.
         stacked = paddle.stack(per_tensor).astype("float32")
@@ -209,10 +283,8 @@ class HFBitexactClipGradByGlobalNorm(nn.ClipGradByGlobalNorm):
         # (3) coefficient, one rounding per torch kernel, then the unconditional clamp.
         clip_coef = _hf_clip_coef(global_norm, self.clip_norm)
 
-        norm_value = float(global_norm)
-        coef_value = float(clip_coef)
-        self.last_global_norm = norm_value
-        self.last_clip_coef = coef_value
+        self.last_global_norm = float(global_norm)
+        self.last_clip_coef = float(clip_coef)
 
         # (4) scale with FP32 opmath and round back to BF16, in place.
         return _hf_scale_grads(params_grads, clip_coef)

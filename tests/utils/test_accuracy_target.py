@@ -131,6 +131,43 @@ class TestFinetuningArgumentsDefault(unittest.TestCase):
         self.assertIs(normalize_accuracy_target(default), False)
 
 
+class TestFinetuningArgumentsCLI(unittest.TestCase):
+    """The CLI spellings that existed when the field was a ``bool`` must keep working.
+
+    ``PdArgumentParser`` synthesizes ``nargs="?"`` / ``const=True`` only for
+    ``bool`` fields, so widening the field to a string would have made the
+    valueless ``--use_accuracy_compatible`` fail to parse. The field declares both
+    in its metadata instead; these cases pin that.
+    """
+
+    def _parse(self, argv):
+        from paddleformers.trainer.argparser import PdArgumentParser
+
+        parser = PdArgumentParser(FinetuningArguments)
+        (args,) = parser.parse_args_into_dataclasses(
+            ["--output_dir", "/tmp/accuracy_target_cli"] + argv, look_for_args_file=False
+        )
+        return args.use_accuracy_compatible
+
+    def test_valueless_flag_still_means_megatron(self):
+        value = self._parse(["--use_accuracy_compatible"])
+        self.assertEqual(normalize_accuracy_target(value), ACCURACY_TARGET_MEGATRON)
+
+    def test_omitted_flag_is_off(self):
+        self.assertIs(normalize_accuracy_target(self._parse([])), False)
+
+    def test_explicit_targets_round_trip(self):
+        for spelling, expected in (
+            ("hf", ACCURACY_TARGET_HF),
+            ("megatron", ACCURACY_TARGET_MEGATRON),
+            ("true", ACCURACY_TARGET_MEGATRON),
+            ("false", False),
+        ):
+            with self.subTest(spelling=spelling):
+                value = self._parse(["--use_accuracy_compatible", spelling])
+                self.assertEqual(normalize_accuracy_target(value), expected)
+
+
 class TestSetLlmConfigNormalizes(unittest.TestCase):
     """``set_llm_config`` is the single funnel from args to config."""
 

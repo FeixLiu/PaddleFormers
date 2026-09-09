@@ -48,8 +48,8 @@ from .hf_bitexact_clip import (
     HFBitexactClipGradByGlobalNorm,
     _hf_clip_coef,
     _hf_global_norm,
-    _hf_norm_sq,
     _hf_scale_grads,
+    hf_param_norm_sq,
 )
 
 __all__ = [
@@ -168,9 +168,11 @@ class MoEHybridParallelClipGrad:
         # path would silently revert to the paddle global-norm formula and lose
         # the bit-exact reference that ``config.use_accuracy_compatible="hf"``
         # selected (which is exactly the failure mode the replacement wrapper
-        # below exists to prevent).
+        # below exists to prevent). ``hf_param_norm_sq`` also applies the
+        # reference's split to fused projections, so a fused weight contributes
+        # its several BF16 norms here rather than one over the whole block.
         hf_bitexact = isinstance(self._clip, HFBitexactClipGradByGlobalNorm)
-        norm_fn = _hf_norm_sq if hf_bitexact else clip._squared_l2_norm
+        norm_fn = hf_param_norm_sq if hf_bitexact else (lambda _p, g: clip._squared_l2_norm(g))
 
         sum_square_dist_fp16 = []
         sum_square_dist_bf16 = []
@@ -197,7 +199,7 @@ class MoEHybridParallelClipGrad:
             if g.type == core.VarDesc.VarType.SELECTED_ROWS:
                 merge_grad = clip.merge_selected_rows(g)
                 merge_grad = clip.get_tensor_from_selected_rows(merge_grad)
-            sum_square = norm_fn(merge_grad)
+            sum_square = norm_fn(p, merge_grad)
 
             not_shared_enable = (not hasattr(p, "is_firstly_shared")) or (
                 hasattr(p, "is_firstly_shared") and getattr(p, "is_firstly_shared", True)

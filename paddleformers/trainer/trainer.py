@@ -3766,9 +3766,17 @@ class Trainer:
 
         accuracy_target = getattr(getattr(self.model, "config", None), "use_accuracy_compatible", False)
         if hf_bitexact_clip_enabled(accuracy_target):
-            from ..utils import HFBitexactClipGradByGlobalNorm
+            from ..utils import (
+                HFBitexactClipGradByGlobalNorm,
+                verify_hf_norm_groups_registered,
+            )
 
-            logger.info("Using HF bit-exact gradient clipping " f"(max_grad_norm={self.args.max_grad_norm})")
+            fused, reference = verify_hf_norm_groups_registered(self.model)
+            logger.info(
+                "Using HF bit-exact gradient clipping "
+                f"(max_grad_norm={self.args.max_grad_norm}); global norm taken over the "
+                f"reference's {reference}-tensor partition of {fused} parameters"
+            )
             return HFBitexactClipGradByGlobalNorm(self.args.max_grad_norm, trainer=self)
         return nn.ClipGradByGlobalNorm(self.args.max_grad_norm)
 
@@ -3987,6 +3995,15 @@ class Trainer:
         else:
             dist_optimizer = fleet.distributed_optimizer(optimizer)
         if isinstance(dist_optimizer, HybridParallelOptimizer) and self.args.max_grad_norm > 0:
+            # ``HybridParallelOptimizer.__init__`` has just replaced ``_grad_clip``
+            # with paddle's wrapper, which recomputes the global norm with paddle's
+            # formula. Put the HF recipe back before anything else reads the clip,
+            # so the ``_global_norm`` instrumentation below and the optimizer step
+            # both see the same object. No-op for every other accuracy target.
+            from ..utils.hf_bitexact_hybrid_clip import restore_hf_bitexact_clip
+
+            restore_hf_bitexact_clip(dist_optimizer)
+
             gradclip = dist_optimizer._inner_opt._grad_clip
             global_norm_func = gradclip._global_norm
             training_logs = self.global_training_logs

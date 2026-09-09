@@ -81,6 +81,8 @@ import_structure = {
     "hf_bitexact_clip": [
         "HFBitexactClipGradByGlobalNorm",
         "hf_bitexact_clip_enabled",
+        "hf_norm_partition_size",
+        "verify_hf_norm_groups_registered",
     ],
     "env": ["CONFIG_NAME", "GENERATION_CONFIG_NAME", "LEGACY_CONFIG_NAME"],
     "log": ["logger"],
@@ -133,6 +135,8 @@ if TYPE_CHECKING:
     from .hf_bitexact_clip import (
         HFBitexactClipGradByGlobalNorm,
         hf_bitexact_clip_enabled,
+        hf_norm_partition_size,
+        verify_hf_norm_groups_registered,
     )
     from .import_utils import *
     from .infohub import infohub
