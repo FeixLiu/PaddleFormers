@@ -335,9 +335,27 @@ class FinetuningArguments(
         },
     )
 
-    use_accuracy_compatible: bool = field(
-        default=False,
-        metadata={"help": ("Whether to enable accuracy alignment with the Megatron framework.")},
+    # Annotated ``str`` rather than ``Union[bool, str]``: ``PdArgumentParser``
+    # only accepts ``Optional[X]`` for ``Union`` and raises on anything else.
+    # The default is the empty string, not "false": a non-empty string is
+    # *truthy*, and this field is truthiness-tested in about a dozen places, so a
+    # "false" default silently turns the accuracy-compatible kernels on for every
+    # run that never sets it. The authoritative conversion happens in
+    # ``LlmMetaConfig.set_llm_config`` via ``normalize_accuracy_target``, which
+    # also accepts a real bool and the stringified spellings, so a YAML ``true``
+    # still resolves to "megatron"; the falsy default here is defense in depth
+    # for any path that reads the args object without going through that funnel.
+    use_accuracy_compatible: str = field(
+        default="",
+        metadata={
+            "help": (
+                "Which reference the accuracy-compatible kernels reproduce bit-for-bit. "
+                "Empty/False (default) uses the throughput kernels; 'megatron' (also accepted "
+                "as True, its historical meaning) aligns with Megatron-LM; 'hf' aligns "
+                "with the HuggingFace/Torch reference. Normalized by "
+                "paddleformers.utils.accuracy_target.normalize_accuracy_target."
+            )
+        },
     )
 
     def __post_init__(self):
