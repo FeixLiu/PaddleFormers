@@ -69,6 +69,7 @@ __all__ = [
     "HFBitexactClipGradByGlobalNorm",
     "hf_bitexact_clip_enabled",
     "hf_norm_partition_size",
+    "unwrap_hf_bitexact_clip",
     "verify_hf_norm_groups_registered",
 ]
 
@@ -93,6 +94,24 @@ def _bf16(value: paddle.Tensor) -> paddle.Tensor:
     while still discarding exactly the bits torch discards.
     """
     return value.astype("bfloat16").astype("float32")
+
+
+def unwrap_hf_bitexact_clip(grad_clip):
+    """The HF clip inside ``grad_clip``, or ``None`` if there is none.
+
+    Distributed wrappers keep the clip they replaced in ``_clip``, and paddle
+    **nests** them: ``HybridParallelOptimizer.__init__`` wraps
+    ``inner_opt._grad_clip`` once for the optimizer and then wraps *that already
+    wrapped object* again for every entry of ``_param_groups``. A parameter
+    group's clip is therefore ``Wrapper(Wrapper(HFBitexactClipGradByGlobalNorm))``,
+    and matching on one level of ``_clip`` would miss it -- the group would fall
+    back to paddle's global-norm formula while the rest of the model used torch's.
+    """
+    while grad_clip is not None:
+        if isinstance(grad_clip, HFBitexactClipGradByGlobalNorm):
+            return grad_clip
+        grad_clip = getattr(grad_clip, "_clip", None)
+    return None
 
 
 # -- shared primitives ---------------------------------------------------------

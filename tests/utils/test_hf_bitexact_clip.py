@@ -28,6 +28,7 @@ from paddleformers.utils.hf_bitexact_clip import (
     _bf16,
     _hf_global_norm,
     hf_norm_partition_size,
+    unwrap_hf_bitexact_clip,
     verify_hf_norm_groups_registered,
 )
 from paddleformers.utils.hf_bitexact_hybrid_clip import (
@@ -203,6 +204,19 @@ class TestMoEHybridParallelClipHf:
         assert wrapper.stat["global_grad_norm"] == grouped
         assert grouped != whole
 
+    def test_double_wrapped_clip_still_uses_the_hf_recipe(self):
+        """``MoEHybridParallelOptimizer`` wraps the already-wrapped ``_grad_clip``
+        again for each ``_param_groups`` entry, so the HF clip sits two levels
+        down for those groups."""
+        inner = _clip(1.0)
+        wrapper = MoEHybridParallelClipGrad(
+            MoEHybridParallelClipGrad(inner, hcg=None, timers=None), hcg=None, timers=None
+        )
+        wrapper._global_norm = lambda *a, **k: None
+        values, g1, g2, (whole, grouped) = _find_differing_grouping()
+        wrapper._dygraph_clip([(_param("fused", groups=[g1, g2]), paddle.to_tensor([values], dtype="float32"))])
+        assert wrapper.stat["global_grad_norm"] == grouped
+
 
 class TestHFBitexactHybridParallelClipGrad:
     """The stock ``HybridParallelClipGrad`` replacement keeps the HF recipe.
@@ -313,6 +327,42 @@ class TestRestoreHFBitexactClip:
         inner = SimpleNamespace(_grad_clip=None, _param_groups=[group])
         assert restore_hf_bitexact_clip(SimpleNamespace(_inner_opt=inner)) is True
         assert isinstance(group["grad_clip"], HFBitexactHybridParallelClipGrad)
+
+    def test_double_wrapped_param_group_is_restored(self):
+        """``HybridParallelOptimizer`` wraps the already-wrapped ``_grad_clip``
+        again for each ``_param_groups`` entry, so a group's clip nests two
+        wrappers. Matching one level of ``_clip`` would leave those groups on
+        paddle's formula while the rest of the model used torch's."""
+        hf = _clip(1.0)
+        outer = HybridParallelClipGrad(HybridParallelClipGrad(hf, hcg=None), hcg=None)
+        group = {"grad_clip": outer}
+        inner = SimpleNamespace(_grad_clip=outer, _param_groups=[group])
+        assert restore_hf_bitexact_clip(SimpleNamespace(_inner_opt=inner)) is True
+        for restored in (inner._grad_clip, group["grad_clip"]):
+            assert isinstance(restored, HFBitexactHybridParallelClipGrad)
+            # the double wrap is collapsed: reducing twice would square the norm
+            assert restored._clip is hf
+
+    def test_restoring_twice_is_stable(self):
+        dist_opt, inner = self._dist_optimizer(_clip(1.0))
+        restore_hf_bitexact_clip(dist_opt)
+        first = inner._grad_clip
+        assert restore_hf_bitexact_clip(dist_opt) is False
+        assert inner._grad_clip is first
+
+
+class TestUnwrapHFBitexactClip:
+    def test_finds_the_clip_through_nested_wrappers(self):
+        hf = _clip(1.0)
+        nested = HybridParallelClipGrad(HybridParallelClipGrad(hf, hcg=None), hcg=None)
+        assert unwrap_hf_bitexact_clip(nested) is hf
+        assert unwrap_hf_bitexact_clip(hf) is hf
+
+    def test_returns_none_for_other_clips(self):
+        assert unwrap_hf_bitexact_clip(None) is None
+        assert unwrap_hf_bitexact_clip(paddle.nn.ClipGradByGlobalNorm(1.0)) is None
+        plain = HybridParallelClipGrad(paddle.nn.ClipGradByGlobalNorm(1.0), hcg=None)
+        assert unwrap_hf_bitexact_clip(plain) is None
 
 
 class TestNormGroupContract:

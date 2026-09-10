@@ -45,11 +45,11 @@ from paddle.framework import core
 from paddle.nn import ClipGradByGlobalNorm, clip
 
 from .hf_bitexact_clip import (
-    HFBitexactClipGradByGlobalNorm,
     _hf_clip_coef,
     _hf_global_norm,
     _hf_scale_grads,
     hf_param_norm_sq,
+    unwrap_hf_bitexact_clip,
 )
 
 __all__ = [
@@ -171,7 +171,7 @@ class MoEHybridParallelClipGrad:
         # below exists to prevent). ``hf_param_norm_sq`` also applies the
         # reference's split to fused projections, so a fused weight contributes
         # its several BF16 norms here rather than one over the whole block.
-        hf_bitexact = isinstance(self._clip, HFBitexactClipGradByGlobalNorm)
+        hf_bitexact = unwrap_hf_bitexact_clip(self._clip) is not None
         norm_fn = hf_param_norm_sq if hf_bitexact else (lambda _p, g: clip._squared_l2_norm(g))
 
         sum_square_dist_fp16 = []
@@ -326,7 +326,7 @@ class MoEHybridParallelClipGrad:
         # BF16-rounded scaling -- instead of paddle's formula below. The only
         # unavoidable deviation from the single-GPU reference is the reduction
         # order of the all-reduce, which stays FP32 and sums exact squares.
-        if isinstance(self._clip, HFBitexactClipGradByGlobalNorm):
+        if unwrap_hf_bitexact_clip(self._clip) is not None:
             total = (
                 global_norm_var_dist
                 + global_norm_var_not_dist

@@ -49,11 +49,11 @@ from paddle.framework import core
 from paddle.nn import clip
 
 from .hf_bitexact_clip import (
-    HFBitexactClipGradByGlobalNorm,
     _hf_clip_coef,
     _hf_global_norm,
     _hf_scale_grads,
     hf_param_norm_sq,
+    unwrap_hf_bitexact_clip,
 )
 from .log import logger
 
@@ -151,13 +151,19 @@ def restore_hf_bitexact_clip(dist_optimizer) -> bool:
     """
 
     def rewrap(wrapper):
-        if not isinstance(wrapper, HybridParallelClipGrad):
-            # Already an HF wrapper, or MoEHybridParallelClipGrad, which keeps the
-            # recipe itself.
+        if type(wrapper) is not HybridParallelClipGrad:
+            # Already the HF wrapper, or MoEHybridParallelClipGrad, which keeps
+            # the recipe itself.
             return None
-        if not isinstance(wrapper._clip, HFBitexactClipGradByGlobalNorm):
+        # Not ``wrapper._clip``: paddle wraps the already-wrapped ``_grad_clip``
+        # a second time for every ``_param_groups`` entry, so a group's clip is
+        # ``HybridParallelClipGrad(HybridParallelClipGrad(hf_clip))``. Rewrapping
+        # the innermost HF clip both finds those and collapses the double wrap,
+        # which would otherwise reduce the norm twice.
+        hf_clip = unwrap_hf_bitexact_clip(wrapper)
+        if hf_clip is None:
             return None
-        return HFBitexactHybridParallelClipGrad(wrapper._clip, wrapper._hcg, wrapper.split_norm_comm, wrapper._timers)
+        return HFBitexactHybridParallelClipGrad(hf_clip, wrapper._hcg, wrapper.split_norm_comm, wrapper._timers)
 
     inner_opt = unwrap_optimizer(dist_optimizer._inner_opt, _WRAPPER_OPTIMIZERS)
     replaced = False
